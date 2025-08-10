@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Configuration Management</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark charcoal */
+            color: #e2e8f0; /* Light gray for general text */
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+        .hero-background {
+            /* Placeholder cloud image based on user's reference image */
+            background-image: url('https://shorturl.at/mjwhS');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2d3748; /* Darker track */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4a5568; /* Slightly lighter thumb */
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* Lighter on hover */
+        }
+
+        /* Animation for cloud migration image placeholder */
+        @keyframes cloudMigration {
+            0% { transform: translateX(0); opacity: 0.5; }
+            50% { transform: translateX(20px); opacity: 1; }
+            100% { transform: translateX(0); opacity: 0.5; }
+        }
+        .animate-cloud-migration {
+            animation: cloudMigration 4s infinite ease-in-out;
+        }
+
+        /* Button hover effect - glowing border */
+        .btn-animated:hover {
+            box-shadow: 0 0 15px rgba(129, 140, 248, 0.8), 0 0 30px rgba(129, 140, 248, 0.6);
+        }
+        .btn-animated {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section class="hero-background relative h-screen flex items-center justify-center text-center p-4">
+        <div class="absolute inset-0 bg-black opacity-60"></div> <!-- Dark overlay for readability -->
+        <div class="relative z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white rounded-lg p-2 from-blue-600 to-purple-600 shadow-lg">
+                Automated Configuration Management
+            </h1>
+            <!-- Tagline: white color - font size -16px -->
+            <p class="text-base text-white mb-8 font-medium drop-shadow-md">
+                Intelligent automation that handles your configurations end-to-end, enabling faster deployments, stronger compliance, and minimal downtime
+            </p>
+           
+        </div>
+    </section>
+
+    <!-- Content Section: Paragraph for the service & Image for Cloud Migration -->
+    <main class="container mx-auto px-4 py-16">
+        <section class="mb-20 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 flex justify-center">
+                <!-- Animate image for cloud migration -->
+                <!-- <div class="w-48 h-48 bg-blue-700 rounded-full flex items-center justify-center shadow-lg animate-cloud-migration"> -->
+                    <!-- <span class="text-white text-lg font-semibold text-center">Cloud Migration Animation</span> -->
+                    <!-- You could replace this div with an SVG or an actual image -->
+                    <!-- Example: <img src="path/to/your/cloud-migration-icon.svg" alt="Cloud Migration" class="w-full h-full object-contain"> -->
+                <!-- </div> -->
+                 <img src="https://shorturl.at/in77y" alt="Animated Cloud Service Icon" onerror="this.onerror=null;this.src='https://placehold.co/200x200/4a5568/e2e8f0?text=Image+Error';">
+            </div>
+            <div class="md:w-1/2 text-lg leading-relaxed content-text-section">
+                <h2 class="text-3xl sm:text-4xl font-bold text-blue-400 mb-6 rounded-lg">Transforming Network Configuration</h2>
+                <p class="mb-4">
+                    The rapid evolution of networking technologies and the increasing complexity of IT infrastructures present significant challenges for network configuration management. As organizations deploy more sophisticated and scalable networks, including data centers, cloud environments, and hybrid networks, the need for effective configuration management becomes more critical.
+                </p>
+                <p class="mb-4">
+                    Traditional manual methods of managing network configurations are increasingly inadequate in meeting these demands, leading to the rise of <strong class="text-purple-300">Automated Network Configuration Management (NCM)</strong> as a transformative solution. Automated NCM addresses these challenges by leveraging automation technologies to streamline and enhance the management of network configurations, using software tools and platforms to automate routine tasks, enforce standards, and ensure consistency.
+                </p>
+                <button class="mt-6 bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 btn-animated">
+                    Contact Us
+                </button>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section id="challenges" class="mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">Are These Your Network Headaches?</h2>
+            <p class="text-xl text-center text-purple-300 mb-12 reveal-text">The Hidden Costs of Traditional Configuration</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Challenge 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-red-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-red-300">Human Error</h3>
+                    <p class="text-gray-300">Small mistakes, significant consequences. Manual configuration is prone to errors, which can lead to network outages, security vulnerabilities, and performance issues.</p>
+                </div>
+                <!-- Challenge 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-yellow-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-300">Scalability Issues</h3>
+                    <p class="text-gray-300">As networks grow in size and complexity, managing configurations manually becomes increasingly cumbersome, hindering your ability to scale effectively.</p>
+                </div>
+                <!-- Challenge 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-indigo-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Configuration Drift</h3>
+                    <p class="text-gray-300">Over time, network configurations can drift from their intended state due to manual changes, resulting in inconsistencies and vulnerabilities.</p>
+                </div>
+                <!-- Challenge 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-green-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-green-300">Compliance & Documentation</h3>
+                    <p class="text-gray-300">Maintaining accurate documentation is essential for compliance, but manual efforts are time-consuming and may not always reflect the current state.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodologies Section -->
+        <section id="methodologies" class="mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">How We Deliver Excellence</h2>
+            <p class="text-xl text-center text-purple-300 mb-12 reveal-text">Proven Methodologies and Industry-Leading Tools</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Methodology 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-yellow-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-yellow-300">Configuration Management Tools</h3>
+                    <p class="text-gray-300">We deploy powerful tools like Ansible, Puppet, and Chef to automate network configurations, enforcing policies across multiple devices consistently.</p>
+                </div>
+                <!-- Methodology 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-red-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-red-300">Network Automation Scripts</h3>
+                    <p class="text-gray-300">Custom scripts in Python or Bash perform routine tasks like updating settings, applying patches, or monitoring performance, scheduled or event-triggered.</p>
+                </div>
+                <!-- Methodology 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-indigo-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Configuration Management Databases (CMDBs)</h3>
+                    <p class="text-gray-300">A centralized repository for network configurations, providing a single source of truth and enabling automated tools to retrieve and update data.</p>
+                </div>
+                <!-- Methodology 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-green-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-green-300">Orchestration Platforms</h3>
+                    <p class="text-gray-300">These platforms integrate various automation tools, providing end-to-end network management and automating complex workflows like provisioning new services.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="mb-20">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">Why Choose Automated NCM?</h2>
+            <p class="text-xl text-center text-purple-300 mb-12 reveal-text">Tangible Benefits for Your Business.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-green-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-green-300">Improved Accuracy</h3>
+                    <p class="text-gray-300">Automation ensures configurations are applied consistently and correctly, leading to more reliable and stable network operations by reducing human error.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-indigo-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-300">Reduced Configuration Drift</h3>
+                    <p class="text-gray-300">Automated tools continuously monitor and enforce configuration standards, minimizing drift and ensuring your network remains in its desired state.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-blue-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-blue-300">Faster Deployment</h3>
+                    <p class="text-gray-300">Automation speeds up the deployment of network configurations, allowing organizations to respond more quickly to changing business needs and demands.</p>
+                </div>
+                <!-- Benefit 4 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                    <div class="text-5xl mb-4 text-purple-400"></div> <!-- Icon placeholder -->
+                    <h3 class="text-xl font-semibold mb-3 text-purple-300">Enhanced Compliance</h3>
+                    <p class="text-gray-300">Automated NCM tools help maintain accurate documentation and ensure compliance with regulatory requirements by providing detailed records and audit trails.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section id="contact" class="text-center bg-gradient-to-r from-blue-900 to-purple-900 p-10 rounded-2xl shadow-2xl reveal-section">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Transform Your Network Operations?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Don't let manual complexities hold you back. Embrace the power of Automated Network Configuration Management and unlock new levels of efficiency, security, and scalability.
+            </p>
+            <button class="bg-transparent border border-white text-white hover:bg-white hover:text-purple-700 font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 ml-4 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50 btn-animated">
+                Contact Our Experts
+            </button>
+        </section>
+
+    </main>
+
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">CQ</div>
+                        <h3 class="text-xl font-bold">ClickQura <span class="text-blue-400">AI Solutions</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing innovative IT solutions to help businesses thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="career.css" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">3-2-603/33/32/B,ZEHRA NAGAR,RD.NO:10, BANJARA HILLS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">+91 7386145454</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@clickqura.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0"><span id="current-year">&copy;</span>2025 ClickQura AI Solutions. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to animate elements on scroll
+            function setupScrollAnimations() {
+                // Card Fade Down (Fade In from below)
+                gsap.utils.toArray(".reveal-card").forEach((card, i) => {
+                    gsap.from(card, {
+                        opacity: 0,
+                        y: 50, /* Start 50px below */
+                        duration: 0.8,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%", // Start animation when top of card is 85% from viewport top
+                            end: "bottom center",
+                            toggleActions: "play none none none",
+                            once: true // Play animation only once
+                        }
+                    });
+                });
+
+                // Text movements for better visibility (fading in and slight upward movement)
+                gsap.utils.toArray(".reveal-text").forEach((text, i) => {
+                    gsap.from(text, {
+                        opacity: 0,
+                        y: 20, /* Start 20px below */
+                        duration: 0.6,
+                        ease: "power1.out",
+                        scrollTrigger: {
+                            trigger: text,
+                            start: "top 90%", // Start animation when top of text is 90% from viewport top
+                            end: "bottom center",
+                            toggleActions: "play none none none",
+                            once: true
+                        }
+                    });
+                });
+
+                // Animate the main content text section
+                gsap.from(".content-text-section", {
+                    opacity: 0,
+                    x: 50,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".content-text-section",
+                        start: "top 80%",
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                        once: true
+                    }
+                });
+
+                 // Animate the Final Call to Action section
+                 gsap.from(".reveal-section", {
+                    opacity: 0,
+                    scale: 0.95,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: ".reveal-section",
+                        start: "top 80%",
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                        once: true
+                    }
+                });
+            }
+
+            // Initial setup of animations
+            setupScrollAnimations();
+
+            // Re-run animations if the window is resized (useful for responsive adjustments)
+            // Note: For complex sites, consider debouncing this.
+            window.addEventListener('resize', () => {
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // Kill existing triggers
+                setupScrollAnimations(); // Re-setup
+            });
+        });
+    </script>
+
+</body>
+</html>

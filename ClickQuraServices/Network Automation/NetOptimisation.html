@@ -1,0 +1,587 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickQura AI Solutions - 24/7 Network Monitoring & Optimization</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-gradient-radial {
+            background-image: radial-gradient(circle at top right, rgba(23, 102, 244, 0.2) 0%, transparent 50%);
+        }
+        .feature-icon {
+            font-size: 2.5rem; /* Larger icon size */
+            color: #60a5fa; /* Blue color for icons */
+        }
+        /* Custom styles for the hero background image */
+        .hero-bg {
+            background-image: url('https://shorturl.at/GAVb4'); /* Placeholder dark abstract network image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+            z-index: 0;
+        }
+
+        /* Button hover effect */
+        .animated-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .animated-button:hover {
+            transform: scale(1.05) translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            background-color: #3b82f6; /* Slightly lighter blue on hover */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 antialiased">
+
+    <!-- Header Section (Hero Action) -->
+    <header class="relative overflow-hidden py-16 md:py-24 hero-bg">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <!-- Left Content Area -->
+                <div class="md:w-3/4 text-center">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-3">
+                        24/7 Network Monitoring <br class="block md:hidden"> & Optimization
+                    </h1>
+                    <p class="text-blue-400 text-lg md:text-xl font-semibold mb-8">Around-the-clock vigilance and intelligent optimization to keep your network performing at peak efficiency, ensuring maximum uptime, security, and reliability for your business</p>
+                </div>
+
+                <!-- Right Visual Area (removed as per user request) -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Starts Here -->
+
+    <!-- Short Intro/Overview Section (moved from hero) -->
+    <section class="py-12 md:py-16 bg-gray-950 text-center intro-text-section">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                At ClickQura AI Solutions, our 24/7 Network Monitoring & Optimization service ensures your IT infrastructure
+                remains secure, reliable, and performing at its peak around the clock. By combining real-time analytics
+                with AI-powered predictive intelligence, we identify and resolve potential issues before they disrupt
+                operations, while also forecasting future capacity needs to support strategic growth. Our approach
+                integrates continuous monitoring, adaptive learning, and automated performance adjustments to maintain
+                optimal efficiency and prevent downtime. The result is a resilient, always-available network that evolves
+                with your business, delivering the speed, stability, and security needed to thrive in today’s fast-paced,
+                AI-driven digital landscape.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Features Section (similar to the three icons in the image) -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center feature-cards-container">
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 feature-card">
+                    <i class="fas fa-cloud feature-icon mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Comprehensive Monitoring</h3>
+                    <p class="text-gray-400">Holistic oversight across all infrastructure components.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 feature-card">
+                    <i class="fas fa-bell feature-icon mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Automated Alerting</h3>
+                    <p class="text-gray-400">Instant detection and intelligent response to anomalies.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 feature-card">
+                    <i class="fas fa-chart-line feature-icon mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Ongoing Optimization</h3>
+                    <p class="text-gray-400">Continuous fine-tuning for evolving business demands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 24/7 Network Monitoring Services Section -->
+    <section class="py-16 md:py-24 bg-gray-950 service-text-section">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-8 service-heading">24/7 Network Monitoring Services</h2>
+            <p class="text-gray-300 text-lg leading-relaxed text-left mb-6 service-paragraph">
+                At ClickQura AI Solutions, we deliver round-the-clock, intelligent network monitoring to keep your IT infrastructure,
+                applications, servers, and connectivity performing at their best—secure, reliable, and always available.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed text-left mb-6 service-paragraph">
+                Designed for fast-growing businesses, SaaS providers, and enterprises that demand zero downtime, our AI-powered
+                systems continuously track network health, identify irregularities, and initiate automated responses before
+                issues escalate.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed text-left mb-6 service-paragraph">
+                We understand that even the smallest network interruption can lead to service outages, financial losses, and
+                reputational damage. That’s why our monitoring framework combines real-time analytics with predictive insights,
+                giving you complete visibility across your environment—from on-premise setups and cloud platforms to APIs and
+                integrated services.
+            </p>
+            <p class="text-gray-300 text-lg leading-relaxed text-left service-paragraph">
+                Whether you’re scaling a global SaaS solution, running critical fintech or healthcare applications, or managing
+                unpredictable traffic demands, our 24/7 monitoring team provides proactive oversight, seamless integration with
+                your existing systems, and tailored alerting workflows. This ensures rapid issue resolution, strict SLA compliance,
+                and uninterrupted support for your internal IT operations—empowering your business to operate with absolute confidence.
+            </p>
+        </div>
+    </section>
+
+    <!-- How ClickQura AI Solutions 24/7 Monitoring Works Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12 how-it-works-heading">How ClickQura AI Solutions 24/7 Monitoring Works</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 how-it-works-steps">
+                <!-- Step 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl transform transition duration-300 hover:scale-[1.02] how-it-works-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Comprehensive Monitoring Strategy and Implementation</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        We begin by evaluating your IT environment and mission-critical systems to create a tailored monitoring
+                        strategy that delivers complete visibility and actionable insights. Our approach includes:
+                    </p>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Assessing infrastructure components across on-premises, hybrid, and multi-cloud platforms.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Configuring AI-powered monitoring dashboards for real-time tracking.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Deploying modern monitoring tools like Grafana, Prometheus, Elastic Stack.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Implementing automated health checks with predictive failure detection.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Mapping escalation paths and automated alert workflows.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl transform transition duration-300 hover:scale-[1.02] how-it-works-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Automated Alerting and Incident Response</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Our integrated alerting system ensures that every anomaly is detected instantly, enabling our team
+                        to respond before it impacts your operations. Intelligent automation minimizes manual intervention,
+                        accelerating resolution and reducing downtime. What we deliver:
+                    </p>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>AI-driven alert filtering to prioritize critical issues and suppress false positives.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Seamless integrations with Slack, Microsoft Teams, and ticketing systems.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Advanced traffic analysis to detect irregular patterns and security threats.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Synthetic testing to simulate user experiences and identify latency.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Custom dashboards for tracking applications, endpoints, APIs.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl transform transition duration-300 hover:scale-[1.02] how-it-works-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Ongoing Monitoring Optimization and Support</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Beyond setup, we continually fine-tune your monitoring environment to adapt to new business demands,
+                        technology changes, and potential risks—ensuring optimal performance at all times. This includes:
+                    </p>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Adjusting monitoring thresholds to reflect evolving performance baselines.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Conducting regular system audits to maintain accuracy and eliminate outdated configurations.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Proactive capacity planning to ensure your infrastructure can meet future workloads.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-400 mr-3 mt-1 text-lg"></i>
+                            <span>Providing 24/7 expert support to address escalations, performance issues, and SLA adherence.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits of Network Optimization Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12 benefits-heading">Benefits of Network Optimization</h2>
+            <p class="text-gray-300 text-lg leading-relaxed text-center mb-10 max-w-4xl mx-auto benefits-intro-paragraph">
+                Network optimization is effective in boosting network investment returns, while ensuring superior network
+                experience and easier network operations, without the need for capacity expansion. As validated in our
+                engagements with frontrunners like Swisscom, TDC and other leading CSPs, network optimization is proven
+                to produce many direct and indirect benefits on both network and business performance.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 benefits-cards-container">
+                <!-- Benefit 1: Maximize ROI -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform transition duration-300 hover:shadow-2xl hover:border-blue-500 benefit-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Maximize ROI</h3>
+                    </div>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-center">
+                            <i class="fas fa-arrow-down text-red-400 mr-3"></i>
+                            <span><strong class="text-blue-300">31%</strong> reduction of cells with poor spectral efficiency</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-arrow-up text-green-400 mr-3"></i>
+                            <span><strong class="text-blue-300">15%</strong> increase in downlink user throughput during busy hours</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-arrow-down text-red-400 mr-3"></i>
+                            <span><strong class="text-blue-300">10%</strong> reduction in unplanned carrier expansions</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 2: Improve user experience -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform transition duration-300 hover:shadow-2xl hover:border-blue-500 benefit-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Improve user experience</h3>
+                    </div>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-center">
+                            <i class="fas fa-smile text-green-400 mr-3"></i>
+                            <span><strong class="text-blue-300">15%</strong> user experience improvements</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-layer-group text-green-400 mr-3"></i>
+                            <span><strong class="text-blue-300">20%</strong> increase in deployment capacity</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-comments-slash text-red-400 mr-3"></i>
+                            <span><strong class="text-blue-300">70%</strong> reduction in customer complaints</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-trophy text-yellow-400 mr-3"></i>
+                            <span><strong class="text-blue-300">90%</strong> external benchmark wins</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 3: Future-proof operations -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-xl border border-gray-700 transform transition duration-300 hover:shadow-2xl hover:border-blue-500 benefit-card">
+                    <div class="flex items-center mb-6">
+                        <span class="text-5xl font-extrabold text-blue-500 mr-4"></span>
+                        <h3 class="text-2xl font-bold text-white">Future-proof operations</h3>
+                    </div>
+                    <ul class="list-none space-y-3 text-gray-300 pl-0">
+                        <li class="flex items-center">
+                            <i class="fas fa-users text-green-400 mr-3"></i>
+                            <span><strong class="text-blue-300">4x</strong> larger network managed with the same team</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-bolt text-green-400 mr-3"></i>
+                            <span><strong class="text-blue-300">50%</strong> faster site acceptance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-plug text-red-400 mr-3"></i>
+                            <span><strong class="text-blue-300">3.4%</strong> decrease in site power consumption</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+
+
+
+
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">CQ</div>
+                        <h3 class="text-xl font-bold">ClickQura <span class="text-blue-400">AI Solutions</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing innovative IT solutions to help businesses thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="career.css" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">3-2-603/33/32/B,ZEHRA NAGAR,RD.NO:10, BANJARA HILLS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">+91 7386145454</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@clickqura.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0"><span id="current-year">&copy;</span>2025 ClickQura AI Solutions. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP and ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Function to handle scroll animations
+        function setupScrollAnimations() {
+            // Animation for feature cards (fade down)
+            gsap.from(".feature-card", {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".feature-cards-container",
+                    start: "top 80%", // When the top of the container hits 80% from the top of the viewport
+                    end: "bottom 20%",
+                    toggleActions: "play none none none", // Play animation once
+                    // markers: true // Uncomment for debugging scroll trigger points
+                }
+            });
+
+            // Animation for benefits cards (fade down)
+            gsap.from(".benefit-card", {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".benefits-cards-container",
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            // Animation for the short intro text (fade in and subtle movement)
+            gsap.from(".intro-text-section p", {
+                opacity: 0,
+                y: 20,
+                duration: 1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".intro-text-section",
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            // Animation for "24/7 Network Monitoring Services" heading and paragraphs
+            gsap.from(".service-heading", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".service-text-section",
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            gsap.from(".service-paragraph", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                stagger: 0.1,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".service-text-section",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            // Animation for "How ClickQura AI Solutions 24/7 Monitoring Works" heading and cards
+            gsap.from(".how-it-works-heading", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".how-it-works-heading",
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            gsap.from(".how-it-works-card", {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".how-it-works-steps",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+             // Animation for "Benefits of Network Optimization" heading and intro paragraph
+            gsap.from(".benefits-heading", {
+                opacity: 0,
+                y: 30,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".benefits-heading",
+                    start: "top 85%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+
+            gsap.from(".benefits-intro-paragraph", {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: ".benefits-intro-paragraph",
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                    // markers: true
+                }
+            });
+        }
+
+        // Initialize animations when the window loads
+        window.onload = function() {
+            setupScrollAnimations();
+        };
+
+        // Handle potential resize events for ScrollTrigger
+        window.addEventListener('resize', ScrollTrigger.refresh);
+
+    </script>
+
+</body>
+</html>

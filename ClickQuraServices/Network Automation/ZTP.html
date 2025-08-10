@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickQura IT Services - Zero-Touch Provisioning</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .section-title {
+            color: #cbd5e0; /* Slightly darker light color for titles */
+        }
+        .highlight-text {
+            color: #4299e1; /* A nice blue for highlights */
+        }
+        .card {
+            background-color: #2d3748; /* Slightly lighter dark for cards */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            /* Removed initial opacity/transform from CSS for GSAP's autoAlpha to control */
+        }
+        /* Custom styles for the architecture image container */
+        .architecture-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            background-color: #2d3748; /* Card background color for the image container */
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            /* Removed initial opacity/transform from CSS for GSAP's autoAlpha to control */
+        }
+        .architecture-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* Slightly rounded corners for the image itself */
+        }
+        /* Removed initial opacity/transform from CSS for GSAP's autoAlpha to control */
+    </style>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- GSAP ScrollTrigger Plugin CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+</head>
+<body class="antialiased">
+
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-gray-900 to-blue-900 py-20 text-center text-white overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Zero-Touch Provisioning (ZTP)</h1>
+            <p class="text-2xl md:text-3xl font-medium mb-8 highlight-text">
+                Deploy devices in minutes with zero manual intervention — faster, smarter, and ready to work from the moment they’re powered on.
+            </p>
+        </div>
+        <!-- Background elements for visual appeal -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: url('https://shorturl.at/IEpXQ'); background-size: cover; background-position: center;"></div>
+    </section>
+
+    <!-- Introductory Paragraph Section -->
+    <section class="py-12 md:py-16 bg-gray-700 text-center text-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <p class=" text-align text-sm md:text-sm mb-4 intro-paragraph text-base">
+                In today’s fast-paced IT environment, manually deploying and configuring network devices across large, diverse infrastructures can be slow, error-prone, and resource-intensive, often impacting operational efficiency and SLA commitments. Zero-Touch Provisioning (ZTP) eliminates these challenges by automating the entire provisioning process, allowing devices to configure themselves with the correct firmware, security policies, and network settings immediately upon connection.
+            
+            <!-- <p class="text-lg md:text-xl intro-paragraph"> -->
+               This seamless, hands-off approach accelerates deployment timelines, ensures consistent configurations, enhances security compliance, and frees IT teams to focus on strategic growth initiatives. At ClickQura IT Services, we leverage ZTP to help businesses scale faster, reduce costs, and maintain a competitive edge in the evolving IT landscape.
+              </p>
+            <!-- </p> -->
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold section-title mb-10 text-center">Problems with Manual Network Device Provisioning</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-lg mb-6">
+                        Network devices are often configured by network administrators, one device at a time, through a Command-Line Interface (CLI). In large networks at customer locations, network provisioning might mean the provisioning and configuration of thousands of devices.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Manual configuration of such networks can easily push several expert network administrators to work round the clock for days to finish the configuration and provisioning activities—that too, without any guarantee of successful provisioning for these devices.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-lg mb-4 font-semibold text-red-400">Moreover, manual configuration leads to the following network management issues:</p>
+                    <ul class="list-none space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                            <span class="text-lg">80% of all network downtime can be attributed to human errors during network provisioning and configuration.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                            <span class="text-lg">Manual configuration is slow, decentralized, and prone to errors.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
+                            <span class="text-lg">People and travel become expensive as system engineers need physical access to the devices.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ClickQura AI Solutions Section -->
+    <section class="py-16 md:py-24 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold section-title mb-10">ClickQura AI Solutions that Enables ZTP</h2>
+            <p class="text-lg max-w-4xl mx-auto mb-12">
+                ClickQura developed a provisioning tool (for a network device maker) that enables the automatic configuration of devices and redirects a device to the Device Management Software (DMS) as soon as it is plugged in.
+            </p>
+            <h3 class="text-3xl font-semibold highlight-text mb-8">The three main components that participate in the ZTP process are:</h3>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card p-8">
+                    <h4 class="text-2xl font-bold mb-4 text-blue-300">Device Management Software (DMS)</h4>
+                    <p class="text-lg">It manages networking devices, helping network administrators to monitor, manage, and configure them seamlessly.</p>
+                </div>
+                <div class="card p-8">
+                    <h4 class="text-2xl font-bold mb-4 text-blue-300">ZTP Server</h4>
+                    <p class="text-lg">It is a centralized server managed by the IT/Sales team to identify the networking devices sold to various customers.</p>
+                </div>
+                <div class="card p-8">
+                    <h4 class="text-2xl font-bold mb-4 text-blue-300">Device</h4>
+                    <p class="text-lg">This device is stationed at the customer location and can be any networking equipment, such as VoIP devices, routers, and switches. A network can have several devices of various types and configurations.</p>
+                </div>
+            </div>
+
+            <h3 class="text-3xl font-semibold section-title mb-6">High-Level Architecture</h3>
+            <p class="text-lg mb-8">Before we dive into the actual steps of ZTP, let us look at these components. This section describes the major components of the automated ZTP system.</p>
+            <!-- Image for the architecture diagram -->
+            <div class="architecture-image-container mx-auto w-full md:w-3/4 lg:w-2/3">
+                <img src="high level.png" alt="High-Level Architecture Diagram for Zero-Touch Provisioning" class="architecture-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 md:py-24 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold section-title mb-12 text-center">Benefits of ZTP</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-8">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Faster Deployment</h3>
+                    <p class="text-md">ZTP automates the configuration process, allowing network devices to be deployed quickly and efficiently. This saves businesses time and money by reducing the need for on-site technicians and manual configuration.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Consistent Configuration</h3>
+                    <p class="text-md">ZTP ensures that every device is configured to the same standard. This reduces the risk of human error and makes it easier to manage the network, leading to reliable operations.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Improved Security</h3>
+                    <p class="text-md">By automating the configuration process, ZTP reduces the risk of security breaches caused by misconfigurations or human error, especially important for sensitive data or regulated industries.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Centralized Management</h3>
+                    <p class="text-md">ZTP allows for centralized management of the network, making it easier to monitor and control the configuration of devices across the entire organization efficiently.</p>
+                </div>
+                <div class="card p-8">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-white">Scalability</h3>
+                    <p class="text-md">ZTP can scale to meet the needs of businesses of all sizes, from small startups to large enterprises. This makes it a flexible solution that can grow and adapt to meet changing business needs over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section (Optional, but good for a service page) -->
+    <section class="py-16 md:py-24 bg-gray-900 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold section-title mb-6">Ready to Streamline Your Network Deployment?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-10">
+                Contact ClickQura IT Services today to learn how Zero-Touch Provisioning can transform your IT operations.
+            </p>
+            <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 transform hover:scale-105" id="ctaButton">
+                Get a Free Consultation
+            </a>
+        </div>
+    </section>
+
+    
+
+
+
+
+
+
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">CQ</div>
+                        <h3 class="text-xl font-bold">ClickQura <span class="text-blue-400">AI Solutions</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing innovative IT solutions to help businesses thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="career.css" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">3-2-603/33/32/B,ZEHRA NAGAR,RD.NO:10, BANJARA HILLS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">+91 7386145454</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@clickqura.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0"><span id="current-year">&copy;</span>2025 ClickQura AI Solutions. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Animation for Hero Section text (initial load)
+            gsap.from("h1", { duration: 1, y: -50, autoAlpha: 0, ease: "power3.out" }); // Using autoAlpha
+            gsap.from(".hero-section .highlight-text", { duration: 1.2, y: 30, autoAlpha: 0, ease: "power3.out", delay: 0.3 }); // Using autoAlpha
+
+            // Animation for Introductory Paragraphs
+            gsap.utils.toArray(".intro-paragraph").forEach(paragraph => {
+                gsap.from(paragraph, {
+                    autoAlpha: 0, // GSAP handles opacity and visibility
+                    y: 30,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: paragraph,
+                        start: "top bottom", // Starts when element's top hits viewport bottom
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                    }
+                });
+            });
+
+            // Animation for Section Titles (text movements)
+            gsap.utils.toArray(".section-title").forEach(title => {
+                gsap.from(title, {
+                    autoAlpha: 0, // GSAP handles opacity and visibility
+                    y: 30,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: title,
+                        start: "top bottom", // Starts when element's top hits viewport bottom
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                    }
+                });
+            });
+
+            // Animation for Cards (fade down/up effect)
+            gsap.utils.toArray(".card").forEach((card, i) => {
+                gsap.from(card, {
+                    autoAlpha: 0, // GSAP handles opacity and visibility
+                    y: 50,
+                    duration: 0.8,
+                    ease: "power2.out",
+                    delay: i * 0.1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top bottom", // Starts when element's top hits viewport bottom
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                    }
+                });
+            });
+
+            // Animation for Architecture Image Container
+            const archImageContainer = document.querySelector(".architecture-image-container");
+            if (archImageContainer) {
+                gsap.from(archImageContainer, {
+                    autoAlpha: 0, // GSAP handles opacity and visibility
+                    y: 50,
+                    duration: 1,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: archImageContainer,
+                        start: "top bottom", // Starts when element's top hits viewport bottom
+                        end: "bottom center",
+                        toggleActions: "play none none none",
+                    }
+                });
+            }
+
+            // Button Cursor Effect (CTA Button)
+            const ctaButton = document.getElementById("ctaButton");
+            if (ctaButton) {
+                ctaButton.addEventListener("mouseenter", () => {
+                    gsap.to(ctaButton, {
+                        scale: 1.05,
+                        boxShadow: "0 8px 15px rgba(66, 153, 225, 0.4)",
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+
+                ctaButton.addEventListener("mouseleave", () => {
+                    gsap.to(ctaButton, {
+                        scale: 1,
+                        boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

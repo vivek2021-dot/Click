@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Monitoring & Incident Response</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS (Animate on Scroll) CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevents horizontal scroll from animations */
+        }
+        /* Custom styles for the dark theme and animations */
+        .hero-section {
+            background-color: #0b0c10;
+            background-image: url('https://shorturl.at/Vr2sT');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.95));
+        }
+
+        .icon-svg {
+            color: #66fcf1;
+        }
+
+        .card-item {
+            position: relative;
+            z-index: 10;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Keyframes for the cloud migration and tagline animations */
+        @keyframes cloud-migrate {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes tagline-float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        .animate-cloud {
+            animation: cloud-migrate 3s infinite ease-in-out;
+        }
+
+        .animate-tagline {
+            animation: tagline-float 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 leading-relaxed antialiased">
+
+    <!-- Header Section -->
+    <header class="hero-section py-24 text-center text-white relative overflow-hidden">
+        <div class="relative z-10 px-4 md:px-8 max-w-7xl mx-auto">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                Server Monitoring & Incident Response
+            </h1>
+            <p class="text-base sm:text-lg text-gray-200 font-medium max-w-4xl mx-auto animate-tagline">
+                Proactive server monitoring combined with swift incident response to ensure maximum uptime and security for your critical systems.
+            </p>
+        </div>
+    </header>
+
+    <!-- Service Description & Call to Action -->
+    <section class="py-20 px-4 md:px-8 bg-gray-900">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center" data-aos="fade-up">
+            <!-- Animated cloud image placeholder -->
+            <div class="flex justify-center md:justify-start" data-aos="zoom-in-right">
+                <div class="p-6 bg-gray-800 rounded-xl shadow-lg relative">
+                    <!-- Placeholder image for the cloud migration animation -->
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8tuW7fQXgncB0k1cxeq5W-e23tjx2l2I51Q&s" alt="Animated server icon" class="w-40 h-40 animate-cloud rounded-lg"/>
+                    <!-- Small arrow icon -->
+                    <div class="absolute bottom-6 right-6 p-2 bg-gray-700 rounded-full">
+                        <svg class="w-6 h-6 text-gray-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <!-- Service paragraph and contact button -->
+            <div class="text-left" data-aos="fade-left">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-50 mb-6">
+                    Ensure Maximum Uptime
+                </h2>
+                <p class="text-gray-400 mb-8 max-w-xl">
+                    Server Monitoring & Incident Response ensures your servers run smoothly 24/7 by continuously tracking performance and detecting issues early. We provide real-time alerts, quick incident identification, and fast resolution to minimize downtime. Our service includes detailed analysis and proactive planning to keep your IT infrastructure secure, reliable, and efficient.
+                </p>
+                <a href="#contact" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-700 transition duration-300">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Components Section -->
+    <section class="py-20 px-4 md:px-8 bg-gray-800" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-50 mb-12">
+                Server Monitoring: Core Components
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Continuous Performance Monitoring -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl card-item" data-aos="zoom-in">
+                    <svg class="w-12 h-12 mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-3.75-3.75M16 11V7a4 4 0 00-8 0v4m.5 0h7.5M4 16h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50">Continuous Performance Monitoring</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Implement real-time tracking of CPU, RAM, disk usage, and network latency.</li>
+                        <li>Set dynamic thresholds based on historical data and server roles to minimize false positives.</li>
+                    </ul>
+                </div>
+
+                <!-- Proactive Health Checks -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl card-item" data-aos="zoom-in" data-aos-delay="200">
+                    <svg class="w-12 h-12 mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50">Proactive Health Checks</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Schedule regular "heartbeat" checks to detect hardware or software anomalies early.</li>
+                        <li>Monitor from multiple external locations to ensure service availability from the user's perspective.</li>
+                    </ul>
+                </div>
+
+                <!-- Alert Management & Prioritization -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl card-item" data-aos="zoom-in" data-aos-delay="400">
+                    <svg class="w-12 h-12 mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50">Alert Management & Prioritization</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Utilize automated alert triaging to assign issues to the appropriate team members based on severity and expertise.</li>
+                        <li>Implement escalation policies to ensure timely resolution of critical issues.</li>
+                    </ul>
+                </div>
+
+                <!-- Capacity Planning & Trend Analysis -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl card-item" data-aos="zoom-in" data-aos-delay="200">
+                    <svg class="w-12 h-12 mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 13v-3m4 3v-3m4 3v-3m-10 8h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50">Capacity Planning & Trend Analysis</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Regularly analyze historical performance data to anticipate future resource needs and prevent potential bottlenecks.</li>
+                    </ul>
+                </div>
+
+                <!-- Security Monitoring -->
+                <div class="bg-gray-900 p-8 rounded-lg shadow-xl card-item" data-aos="zoom-in" data-aos-delay="400">
+                    <svg class="w-12 h-12 mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.24a2 2 0 010 3.39L13.118 17.5a2 2 0 01-3.39 0L2.382 7.5a2 2 0 013.39-3.39l6.303 6.303a2 2 0 012.828 0l6.303-6.303z" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-gray-50">Security Monitoring</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-400">
+                        <li>Integrate with Security Information and Event Management (SIEM) systems to detect and respond to security threats in real-time.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ITSM Integration Section -->
+    <section class="py-20 px-4 md:px-8 bg-gray-900" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-50 mb-12">
+                IT Service Management (ITSM) Integration
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Catalog & SLAs -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md card-item" data-aos="fade-right">
+                    <svg class="w-10 h-10 mb-3 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-4 0V3m0 2v2m0 12h.01M17 10H7m6 4H7" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Service Catalog & SLAs</h3>
+                    <p class="text-gray-400">Define and document all IT services offered, along with associated Service Level Agreements (SLAs).</p>
+                </div>
+                
+                <!-- Incident & Problem Management -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md card-item" data-aos="fade-right" data-aos-delay="200">
+                    <svg class="w-10 h-10 mb-3 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-3.75-3.75M17 21v-2a2 2 0 00-2-2H9a2 2 0 00-2 2v2m7-14h.01M7 13h10" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Incident & Problem Management</h3>
+                    <p class="text-gray-400">Implement ITSM tools to track and manage incidents and problems efficiently.</p>
+                </div>
+
+                <!-- Change Management -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md card-item" data-aos="fade-right" data-aos-delay="400">
+                    <svg class="w-10 h-10 mb-3 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 12m0 0a8.001 8.001 0 0115.356-2m-3.965 7H21v-5m-1.414 4.243L15 16.5m-6 0l4.243 4.243M17 17h.01" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Change Management</h3>
+                    <p class="text-gray-400">Establish processes to manage changes to the IT environment, ensuring minimal disruption to services.</p>
+                </div>
+
+                <!-- Continuous Improvement -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-md card-item" data-aos="fade-right" data-aos-delay="600">
+                    <svg class="w-10 h-10 mb-3 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Continuous Improvement</h3>
+                    <p class="text-gray-400">Regularly review ITSM processes to identify areas for improvement and enhance service delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Checklist Section -->
+    <section class="py-20 px-4 md:px-8 bg-gray-800" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-50 mb-12">
+                Implementation Checklist
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6 text-lg text-gray-400" data-aos="fade-in">
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Deploy monitoring tools with customizable dashboards.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Establish alerting mechanisms with defined thresholds.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Develop and test incident response plans regularly.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Integrate ITSM tools for efficient service management.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Conduct training sessions for staff on incident response procedures.</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="mr-2 text-indigo-400 text-2xl">✓</span>
+                    <p>Perform regular security audits and vulnerability assessments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 px-4 md:px-8 bg-gray-900" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-gray-50 mb-12">
+                Why Choose Our Server Monitoring & Incident Response?
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Minimize outages -->
+                <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg card-item" data-aos="zoom-in" data-aos-delay="100">
+                    <svg class="w-16 h-16 mx-auto mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Minimize Outages</h3>
+                    <p class="text-gray-400">We minimize unexpected outages and maximize server uptime with proactive monitoring.</p>
+                </div>
+                <!-- Quick resolution -->
+                <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg card-item" data-aos="zoom-in" data-aos-delay="200">
+                    <svg class="w-16 h-16 mx-auto mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Quick Resolution</h3>
+                    <p class="text-gray-400">Our team provides quick, expert incident resolution, whether it's remote or on-site.</p>
+                </div>
+                <!-- Transparent reporting -->
+                <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg card-item" data-aos="zoom-in" data-aos-delay="300">
+                    <svg class="w-16 h-16 mx-auto mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8H8m4-4v12M12 4v12" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Transparent Reporting</h3>
+                    <p class="text-gray-400">We offer transparent, detailed reporting and proactive planning to keep you informed.</p>
+                </div>
+                <!-- Tailored solutions -->
+                <div class="bg-gray-800 p-8 rounded-lg text-center shadow-lg card-item" data-aos="zoom-in" data-aos-delay="400">
+                    <svg class="w-16 h-16 mx-auto mb-4 icon-svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.468 9.245 5.26 7.938 5.75c-1.307.49-2.203 1.8-2.616 3.324-1.282 4.606 1.155 9.07 4.316 11.233M12 6.253c1.168-.785 2.755-.992 4.062-.499 1.307.49 2.203 1.8 2.616 3.324 1.282 4.606-1.155 9.07-4.316 11.233" />
+                    </svg>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-50">Tailored Solutions</h3>
+                    <p class="text-gray-400">Our monitoring is customized to fit your specific business needs and infrastructure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">CQ</div>
+                        <h3 class="text-xl font-bold">ClickQura <span class="text-blue-400">AI Solutions</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing innovative IT solutions to help businesses thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="career.css" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">3-2-603/33/32/B,ZEHRA NAGAR,RD.NO:10, BANJARA HILLS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">+91 7386145454</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@clickqura.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0"><span id="current-year">&copy;</span> ClickQura AI Solutions. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        });
+    </script>
+</body>
+</html>

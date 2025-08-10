@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for hamburger icon and potential dropdown arrows -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS for smoother transitions and overlay */
+        .dropdown-menu {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+            transform-origin: top;
+            opacity: 0;
+            transform: translateY(-10px);
+            pointer-events: none;
+        }
+
+        .dropdown-menu.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 40; /* Below mobile menu, above main content */
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Inter font from Google Fonts (Tailwind doesn't load it by default) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-white shadow-md py-4 px-6 md:px-8 lg:px-12 relative z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Company Logo -->
+            <div class="flex-shrink-0">
+                <a href="#" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-50 transition-colors">
+                    <img src="https://placehold.co/150x40/000000/FFFFFF?text=ClickQura+Logo" alt="Company Logo" class="h-10">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 lg:space-x-12">
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Home</a>
+
+                <!-- Services Dropdown (Mega Menu) -->
+                <div class="relative group" id="services-dropdown-parent">
+                    <button class="flex items-center text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="services-menu">
+                        Services
+                        <svg class="ml-2 w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="services-menu" class="dropdown-menu absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 p-6 w-96 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:group-hover:block transition-all duration-300">
+                        <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                            <div>
+                                <!-- <h3 class="font-bold text-gray-800 mb-2">Column 1</h3> -->
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 1</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 2</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 3</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 4</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 5</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <!-- <h3 class="font-bold text-gray-800 mb-2">Column 2</h3> -->
+                                <ul class="space-y-2 text-sm">
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 6</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 7</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 8</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 9</a></li>
+                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 10</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industries Dropdown -->
+                <div class="relative group" id="industries-dropdown-parent">
+                    <button class="flex items-center text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="industries-menu">
+                        Industries
+                        <svg class="ml-2 w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="industries-menu" class="dropdown-menu absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 p-4 w-48 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:group-hover:block transition-all duration-300">
+                        <ul class="space-y-2 text-sm">
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 1</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 2</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 3</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 4</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">About</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Careers</a>
+            </div>
+
+            <!-- Get in Touch Button (Desktop) -->
+            <div class="hidden md:block">
+                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
+                    Get in Touch
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Icon -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors" aria-label="Open mobile menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full md:hidden py-6 px-4">
+            <div class="flex justify-end mb-6">
+                <button id="close-mobile-menu" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors" aria-label="Close mobile menu">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-4 text-lg">
+                <a href="#" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Home</a>
+
+                <!-- Services Mobile Dropdown -->
+                <div>
+                    <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="mobile-services-menu">
+                        Services
+                        <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-services-menu" class="hidden mt-2 ml-4 space-y-2 text-sm grid grid-cols-2 gap-x-8 gap-y-4">
+                        <!-- <h4 class="font-bold text-gray-700 pt-2">Column 1</h4> -->
+                        <ul class="space-y-1">
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 1</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 2</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 3</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 4</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 5</a></li>
+                        </ul>
+                        <!-- <h4 class="font-bold text-gray-700 pt-4">Column 2</h4> -->
+                        <ul class="space-y-1">
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 6</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 7</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 8</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 9</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 10</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Industries Mobile Dropdown -->
+                <div>
+                    <button id="mobile-industries-toggle" class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="mobile-industries-menu">
+                        Industries
+                        <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="mobile-industries-menu" class="hidden mt-2 ml-4 space-y-2 text-sm">
+                        <ul class="space-y-1">
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 1</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 2</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 3</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 4</a></li>
+                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Industry Heading 5</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="#" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">About</a>
+                <a href="#" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Careers</a>
+
+                <!-- Get in Touch Button (Mobile) -->
+                <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 mt-4">
+                    Get in Touch
+                </a>
+            </nav>
+        </div>
+        <!-- Overlay for mobile menu -->
+        <div class="overlay" id="mobile-menu-overlay"></div>
+    </nav>
+
+    <main class="container mx-auto p-8 text-center">
+        <h1 class="text-4xl font-bold text-gray-800">Welcome to Our Website!</h1>
+        <p class="mt-4 text-lg text-gray-600">Explore our responsive navigation bar.</p>
+    </main>
+
+    <script>
+        // DOM Elements
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        const servicesDropdownParent = document.getElementById('services-dropdown-parent');
+        const servicesMenu = document.getElementById('services-menu');
+
+        const industriesDropdownParent = document.getElementById('industries-dropdown-parent');
+        const industriesMenu = document.getElementById('industries-menu');
+
+        const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+        const mobileServicesMenu = document.getElementById('mobile-services-menu');
+
+        const mobileIndustriesToggle = document.getElementById('mobile-industries-toggle');
+        const mobileIndustriesMenu = document.getElementById('mobile-industries-menu');
+
+        let activeDropdown = null; // To keep track of the currently active dropdown for desktop
+
+        // --- Desktop Dropdown Logic ---
+
+        // Function to open a dropdown
+        function openDropdown(menuElement) {
+            if (activeDropdown && activeDropdown !== menuElement) {
+                closeDropdown(activeDropdown); // Close any other open dropdown
+            }
+            menuElement.classList.remove('hidden');
+            // Add a small delay for CSS transition to apply `display: block` first, then `active` class
+            setTimeout(() => {
+                menuElement.classList.add('active');
+            }, 10);
+            activeDropdown = menuElement;
+            // Set aria-expanded to true for accessibility
+            menuElement.previousElementSibling.setAttribute('aria-expanded', 'true');
+        }
+
+        // Function to close a dropdown
+        function closeDropdown(menuElement) {
+            menuElement.classList.remove('active');
+            // After the transition, hide the element
+            setTimeout(() => {
+                menuElement.classList.add('hidden');
+            }, 300); // Match CSS transition duration
+            if (activeDropdown === menuElement) {
+                activeDropdown = null;
+            }
+            // Set aria-expanded to false for accessibility
+            if (menuElement.previousElementSibling) { // Check if previous element exists (i.e., the button)
+                menuElement.previousElementSibling.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        // Toggle Services Dropdown for Desktop
+        servicesDropdownParent.querySelector('button').addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent document click from immediately closing
+            if (servicesMenu.classList.contains('active')) {
+                closeDropdown(servicesMenu);
+            } else {
+                openDropdown(servicesMenu);
+            }
+        });
+
+        // Toggle Industries Dropdown for Desktop
+        industriesDropdownParent.querySelector('button').addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent document click from immediately closing
+            if (industriesMenu.classList.contains('active')) {
+                closeDropdown(industriesMenu);
+            } else {
+                openDropdown(industriesMenu);
+            }
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (event) => {
+            if (activeDropdown &&
+                !servicesDropdownParent.contains(event.target) &&
+                !industriesDropdownParent.contains(event.target)) {
+                closeDropdown(activeDropdown);
+            }
+        });
+
+        // Prevent dropdown from closing when clicking inside it
+        servicesMenu.addEventListener('click', (event) => event.stopPropagation());
+        industriesMenu.addEventListener('click', (event) => event.stopPropagation());
+
+
+        // --- Mobile Menu Logic ---
+
+        // Open mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling body when menu is open
+        });
+
+        // Close mobile menu
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore body scrolling
+            // Also close any open mobile dropdowns when closing the main menu
+            mobileServicesMenu.classList.remove('active', 'block');
+            mobileServicesMenu.classList.add('hidden');
+            mobileServicesToggle.setAttribute('aria-expanded', 'false');
+
+            mobileIndustriesMenu.classList.remove('active', 'block');
+            mobileIndustriesMenu.classList.add('hidden');
+            mobileIndustriesToggle.setAttribute('aria-expanded', 'false');
+        });
+
+        // Close mobile menu when clicking overlay
+        mobileMenuOverlay.addEventListener('click', () => {
+            closeMobileMenuButton.click(); // Trigger the close button click
+        });
+
+        // Toggle Mobile Services Dropdown
+        mobileServicesToggle.addEventListener('click', () => {
+            const isExpanded = mobileServicesToggle.getAttribute('aria-expanded') === 'true';
+            mobileServicesToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileServicesMenu.classList.toggle('hidden');
+            mobileServicesMenu.classList.toggle('block'); // Use block/hidden for instant mobile toggle
+            mobileServicesToggle.querySelector('svg').classList.toggle('rotate-180', !isExpanded);
+            // Ensure only one mobile dropdown is open at a time
+            if (!isExpanded && mobileIndustriesMenu.classList.contains('block')) {
+                mobileIndustriesMenu.classList.add('hidden');
+                mobileIndustriesMenu.classList.remove('block');
+                mobileIndustriesToggle.setAttribute('aria-expanded', 'false');
+                mobileIndustriesToggle.querySelector('svg').classList.remove('rotate-180');
+            }
+        });
+
+        // Toggle Mobile Industries Dropdown
+        mobileIndustriesToggle.addEventListener('click', () => {
+            const isExpanded = mobileIndustriesToggle.getAttribute('aria-expanded') === 'true';
+            mobileIndustriesToggle.setAttribute('aria-expanded', !isExpanded);
+            mobileIndustriesMenu.classList.toggle('hidden');
+            mobileIndustriesMenu.classList.toggle('block'); // Use block/hidden for instant mobile toggle
+            mobileIndustriesToggle.querySelector('svg').classList.toggle('rotate-180', !isExpanded);
+            // Ensure only one mobile dropdown is open at a time
+            if (!isExpanded && mobileServicesMenu.classList.contains('block')) {
+                mobileServicesMenu.classList.add('hidden');
+                mobileServicesMenu.classList.remove('block');
+                mobileServicesToggle.setAttribute('aria-expanded', 'false');
+                mobileServicesToggle.querySelector('svg').classList.remove('rotate-180');
+            }
+        });
+
+        // Prevent body scroll when mobile menu is open (for larger screens during resize)
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                document.body.style.overflow = '';
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
