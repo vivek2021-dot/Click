@@ -12,6 +12,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- AOS Animate On Scroll library for animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Flowbite JS CDN - Required for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -60,6 +63,103 @@
     </style>
 </head>
 <body class="antialiased">
+<!-- The updated navbar code -->
+         <header class="sticky top-0 shadow-sm bg-stone-100 z-50">
+  <nav class="border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../../Click.svg" class="h-16" alt="clickqura AI Solutions" />
+      </a>
+
+      <!-- Right side buttons -->
+      <div class="flex items-center md:order-2">
+        <a href="../../contact.html"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          Get in touch
+        </a>
+        <button data-collapse-toggle="navbar-main" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+
+        </button>
+      </div>
+
+      <!-- Main nav -->
+      <div id="navbar-main" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+          <li><a href="../../index.html"
+              class="block py-2 px-3 text-blue-600 md:p-0">Home</a></li>
+
+          <!-- Services trigger -->
+          <li>
+            <button id="mega-menu-button" data-dropdown-toggle="mega-menu"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Services
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
+
+          <li>
+            <button id="industries-dropdown-button" data-dropdown-toggle="industries-dropdown"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Industries
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
+
+          <li><a href="../../about.html" class="block py-2 px-3 text-gray-900 md:p-0">About</a></li>
+          <li><a href="../../" class="block py-2 px-3 text-gray-900 md:p-0">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mega menu content OUTSIDE the nav flex container -->
+  <div id="mega-menu"
+    class="absolute top-full z-10 hidden w-full left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
+    <div>
+      <ul class="space-y-4 !text-blue-600">
+        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
+        <li><a href="../Network Automation/NetwokAuto.html" class="hover:text-blue-600">Network Automation</a></li>
+        <li><a href="../ITSales/ITsales.html" class="hover:text-blue-600">IT Sales & Services</a></li>
+        <li><a href="cctvmain.html" class="hover:text-blue-600">CCTV & ACL System</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="../CyberFirwall/CyberSecurity.html" class="hover:text-blue-600">Cybersecurity & Firewall</a></li>
+        <li><a href="../SoftwareDeveloment/softwareDevelop.html" class="hover:text-blue-600">Software Development</a></li>
+        <li><a href="ITSupport.html" class="hover:text-blue-600">24×7 IT Support</a></li>
+        <li><a href="../powerbackhup/powerbackup.html" class="hover:text-blue-600">Power & Backup Solutions</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="#" class="hover:text-blue-600">Home Automation</a></li>
+        <li><a href="../DigitalServices/DigitalService.html" class="hover:text-blue-600">Digital Services</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="industries-dropdown"
+    class="absolute top-full z-10 hidden bg-stone-50 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-blue-600 dark:text-gray-200">
+      <li><a href="../../Industries/Finance.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Financial Services</a></li>
+      <li><a href="../../Industries/healthcare.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Healthcare</a></li>
+      <li><a href="../../Industries/Manufacturing.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manufacturing</a></li>
+      <li><a href="../../Industries/Public.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Public Sector</a></li>
+      </ul>
+    </div>
+</header>
 
     <!-- Scroll to Top Button -->
     <div id="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
@@ -280,14 +380,6 @@
         </div>
     </section>
 
-    
-
-
-
-
-
-
-
  <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -335,8 +427,8 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
                     <ul class="space-y-2">
-                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
-                        <li><a href="career.css" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="../../about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="../../career.html" class="text-gray-400 hover:text-white">Careers</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>

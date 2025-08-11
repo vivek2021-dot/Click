@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flip Card Page</title>
+  <title>Cloud & Virtualisation</title>
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
   <!-- humburgar -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="navtoggle.css">
-
   <!-- GSAP via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="servicesToggle.js" defer></script>
+  <!-- Flowbite JS CDN - Required for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
   <style>
     html {
@@ -64,210 +64,104 @@
 
 <body class="text-white min-h-screen flex flex-col">
 
-<!-- navbar -->
-      <nav class="bg-white shadow-md py-4 px-6 md:px-8 lg:px-12 relative z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <!-- Company Logo -->
-            <div class="flex-shrink-0">
-                <a href="#" class="text-2xl font-bold text-gray-800 rounded-md p-2 hover:bg-gray-50 transition-colors">
-                    <img src="https://placehold.co/150x40/000000/FFFFFF?text=ClickQura+Logo" alt="Company Logo" class="h-10">
-                </a>
-            </div>
+<!-- The updated navbar code -->
+         <header class="sticky top-0 shadow-sm bg-stone-100 z-50">
+  <nav class="border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../../Click.svg" class="h-16" alt="clickqura AI Solutions" />
+      </a>
 
-            <!-- Desktop Navigation Links -->
-            <div class="hidden md:flex items-center space-x-8 lg:space-x-12">
-                <a href="#" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Home</a>
+      <!-- Right side buttons -->
+      <div class="flex items-center md:order-2">
+        <a href="../../contact.html"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          Get in touch
+        </a>
+        <button data-collapse-toggle="navbar-main" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
 
-                <!-- Services Dropdown (Mega Menu) -->
-                <div class="relative group" id="services-dropdown-parent">
-                    <button class="flex items-center text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="services-menu">
-                        Services
-                        <svg class="ml-2 w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="services-menu" class="dropdown-menu absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 p-6 w-96 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:group-hover:block transition-all duration-300 ">
-                        <div class="grid grid-cols-2 gap-x-4 gap-y-2">
-                            <div>
-                                <!-- <h3 class="font-bold text-gray-800 mb-2">Column 1</h3> -->
-                                 <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="../Cloud and Virtualisation/CloudVirtual.html">Cloud & Virtualization</a></h3>
-                                <!-- <ul class="space-y-2 text-sm">
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 1</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 2</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 3</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 4</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 5</a></li>
-                                </ul> -->
-                            </div>
-                            <div>
-                                <!-- <h3 class="font-bold text-gray-800 mb-2">Column 2</h3> -->
-                                 <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../Network Automation/NetwokAuto.html">Network Automation </a></h3>
-                                <!-- <ul class="space-y-2 text-sm">
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 6</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 7</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 8</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 9</a></li>
-                                    <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 10</a></li>
-                                </ul> -->
-                            </div>
-                            <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../ITSales/ITsales.html">IT Sales & Services </a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../CCTV/cctvmain.html">CCTV & Access Control System</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../CyberFirwall/CyberSecurity.html">Cybersecurity & Firewall</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="#">Software Development</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../IT Support/ITSupport.html">24/7 IT Support</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="#">Home Automation</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="../powerbackhup/powerbackup.html">Power & Backup Solutions</a></h2>
-                                </div>
-                                <div>
-                                <h2 class="font-medium text-lg mb-4 text-blue-600"><a href="#">Digital Services</a></h2>
-                                </div>
-                        </div>
-                    </div>
-                </div>
+        </button>
+      </div>
 
-                <!-- Industries Dropdown -->
-                <div class="relative group" id="industries-dropdown-parent">
-                    <button class="flex items-center text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="industries-menu">
-                        Industries
-                        <svg class="ml-2 w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="industries-menu" class="dropdown-menu absolute hidden group-hover:block bg-white shadow-lg rounded-lg mt-2 p-4 w-48 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:group-hover:block transition-all duration-300">
-                        <ul class="space-y-2 text-sm">
-                            <li><a href="../../Industries/Finance.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Financial Services<</a></li>
-                            <li><a href="../../Industries/Manufacturing.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Healthcare</a></li>
-                            <li><a href="../../Industries/healthcare.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Manufacturing</a></li>
-                            <li><a href="../../Industries/Telecom.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Telecom</a></li>
-                            <li><a href="../../Industries/Public.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Public Sector</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <!-- Main nav -->
+      <div id="navbar-main" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+          <li><a href="../../index.html"
+              class="block py-2 px-3 text-blue-600 md:p-0">Home</a></li>
 
-                <a href="../../about.html" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">About</a>
-                <a href="../../careers.html" class="text-gray-700 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Careers</a>
-            </div>
+          <!-- Services trigger -->
+          <li>
+            <button id="mega-menu-button" data-dropdown-toggle="mega-menu"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Services
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
 
-            <!-- Get in Touch Button (Desktop) -->
-            <div class="hidden md:block">
-                <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200">
-                    Get in Touch
-                </a>
-            </div>
+          <li>
+            <button id="industries-dropdown-button" data-dropdown-toggle="industries-dropdown"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Industries
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
 
-            <!-- Mobile Hamburger Icon -->
-            <div class="md:hidden flex items-center">
-                <button id="mobile-menu-button" class="text-blue-700 hover:text-blue-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors" aria-label="Open mobile menu">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-            </div>
-        </div>
+          <li><a href="../../about.html" class="block py-2 px-3 text-gray-900 md:p-0">About</a></li>
+          <li><a href="../../" class="block py-2 px-3 text-gray-900 md:p-0">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform translate-x-full md:hidden py-6 px-4">
-            <div class="flex justify-end mb-6">
-                <button id="close-mobile-menu" class="text-gray-700 hover:text-blue-600 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors" aria-label="Close mobile menu">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
-            </div>
-            <nav class="space-y-4 text-lg">
-                <a href="../../index.html" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Home</a>
+  <!-- Mega menu content OUTSIDE the nav flex container -->
+  <div id="mega-menu"
+    class="absolute top-full z-10 hidden w-full left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
+    <div>
+      <ul class="space-y-4 !text-blue-600">
+        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
+        <li><a href="../Network Automation/NetwokAuto.html" class="hover:text-blue-600">Network Automation</a></li>
+        <li><a href="../ITSales/ITsales.html" class="hover:text-blue-600">IT Sales & Services</a></li>
+        <li><a href="../CCTV/cctvmain.html" class="hover:text-blue-600">CCTV & ACL System</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="../CyberFirwall/CyberSecurity.html" class="hover:text-blue-600">Cybersecurity & Firewall</a></li>
+        <li><a href="../SoftwareDeveloment/softwareDevelop.html" class="hover:text-blue-600">Software Development</a></li>
+        <li><a href="../IT Support/ITSupport.html" class="hover:text-blue-600">24×7 IT Support</a></li>
+        <li><a href="../powerbackhup/powerbackup.html" class="hover:text-blue-600">Power & Backup Solutions</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="#" class="hover:text-blue-600">Home Automation</a></li>
+        <li><a href="../DigitalServices/DigitalService.html" class="hover:text-blue-600">Digital Services</a></li>
+      </ul>
+    </div>
+  </div>
 
-                <!-- Services Mobile Dropdown -->
-                <div>
-                    <button id="mobile-services-toggle" class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="mobile-services-menu">
-                        Services
-                        <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="mobile-services-menu" class="hidden mt-2 ml-4 space-y-2 bg-white text-sm right-0 transform -translate-x-[100%] place-items-center gap-x-4 gap-y-4">
-                        <!-- <h4 class="font-bold text-gray-700 pt-2">Column 1</h4> -->
-                        <div> 
-                        <h3 class="font-medium pl-4 text-blue-600 "><a href="../Cloud and Virtualisation/CloudVirtual.html">Cloud & Virtualization</a></h3>
-                         </div>
-                        <!-- <ul class="space-y-1">
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 1</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 2</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 3</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 4</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 5</a></li>
-                        </ul> -->
-                        <!-- <h4 class="font-bold text-gray-700 pt-4">Column 2</h4> -->
-                        <div> 
-                        <h3 class="font-medium pl-4 text-lg space-y-1 text-blue-600"><a href="../Network Automation/NetwokAuto.html">Network Automation</a></h3>
-                         </div>
-                         <!-- <ul class="space-y-1">
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 6</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 7</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 8</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 9</a></li>
-                            <li><a href="#" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Service Heading 10</a></li>
-                        </ul> -->
-                        <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="../ITSales/ITsales.html">IT Sales & Services</a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600"><a href="../CCTV/cctvmain.html">CCTV & Access Control System</a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="../CyberFirwall/CyberSecurity.html">Cybersecurity & Firewall</a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="#">Software Development</a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="../IT Support/ITSupport.html">24×7 IT Support </a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="../powerbackhup/powerbackup.html">Power & Backup Solutions</a></h3>
-                         </div>
-                         <div > 
-                        <h3 class="font-medium  pl-4 text-lg text-blue-600 "><a href="#">Home Automation</a></h3>
-                         </div>
-                         <div> 
-                        <h3 class="font-medium pl-4 text-lg text-blue-600 "><a href="#">Digital Services</a></h3>
-                         </div>
-                    </div>
-                </div>
+  <div id="industries-dropdown"
+    class="absolute top-full z-10 hidden bg-stone-50 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-blue-600 dark:text-gray-200">
+      <li><a href="../../Industries/Finance.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Financial Services</a></li>
+      <li><a href="../../Industries/healthcare.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Healthcare</a></li>
+      <li><a href="../../Industries/Manufacturing.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manufacturing</a></li>
+      <li><a href="../../Industries/Public.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Public Sector</a></li>
+      </ul>
+    </div>
+</header>
 
-                <!-- Industries Mobile Dropdown -->
-                <div>
-                    <button id="mobile-industries-toggle" class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors focus:outline-none" aria-expanded="false" aria-controls="mobile-industries-menu">
-                        Industries
-                        <svg class="w-4 h-4 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </button>
-                    <div id="mobile-industries-menu" class="hidden mt-2 ml-4 bg-white space-y-2 text-sm right-0 transform -translate-x-[100%]">
-                        <ul class="space-y-1">
-                            <li><a href="../../Industries/Finance.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Financial Services</a></li>
-                            <li><a href="../../Industries/healthcare.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Healthcare</a></li>
-                            <li><a href="../../Industries/Manufacturing.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Manufacturing 3</a></li>
-                            <li><a href="../../Industries/Telecom.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Telecom</a></li>
-                            <li><a href="../../Industries/Public.html" class="block text-gray-600 hover:text-blue-600 transition-colors py-1 px-2 rounded-md hover:bg-gray-50">Public Sector</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <a href="#" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">About</a>
-                <a href="#" class="block text-gray-800 hover:text-blue-600 font-medium py-2 px-3 rounded-md transition-colors">Careers</a>
-
-                <!-- Get in Touch Button (Mobile) -->
-                <a href="#" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 mt-4">
-                    Get in Touch
-                </a>
-            </nav>
-        </div>
-        <!-- Overlay for mobile menu -->
-        <div class="overlay" id="mobile-menu-overlay"></div>
-    </nav>
-    <!-- close -->
 
   <!-- Hero Section -->
   <section class="min-h-[90h] flex items-center justify-center text-center bg-black/60 backdrop-blur-md">

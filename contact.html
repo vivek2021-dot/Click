@@ -9,347 +9,109 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="contact.js" defer></script>
-    <script src="menuToggle.js" defer></script>
-    
+    <!-- Flowbite JS CDN - Required for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+
     
 </head>
 <body class="bg-white font-sans">
-<!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="clickqura1.png" alt="ClickQura Logo" class="h-24 mr-12">
-                <h1 class="text-2xl font-bold text-gray-800"><span class="text-blue-600"></span></h1>
-            </div>
-            
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8">
-                <div class="nav-item relative">
-                    <a href="index.html" class="text-gray-800 hover:text-blue-600 font-medium">Home</a>
-                </div>
-                <div class="nav-item relative group">
-                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Services</a>
-                      <!-- desktop menu -->
-                       <div class="mega-menu absolute left-1/2 transform -translate-x-1/2 mt-2 w-[800px] max-w-4xl bg-white shadow-lg rounded-lg p-4 grid grid-cols-2 gap-x-4 gap-y-2">
-                        <!-- <div class="absolute left-0 top-full mt-2 w-screen max-w-4xl bg-white shadow-lg rounded-lg p-8 hidden group-hover:grid lg:grid-cols-8 gap-x-12 z-50 text-sm"> -->
-                                 <!-- left-1/2 transform -translate-x-1/2 -->
-                        <div class="p4">
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html">Cloud & Virtualization</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Modern IT Infrastructure</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Cloud migration & management</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Virtual machines & storage setup</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Cloud Deployement Models</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Virtualization Platforms Supported</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Consultation to Support</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/Network Automation/NetwokAuto.html">Network Automation</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Efficient, High-Performance Networking</a></li>
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Automated Configuration Management</a></li>
-                                <li><a href="services/hardware/hardware.html" class="text-gray-700 hover:text-blue-600">Zero-touch provisioning</a></li>
-                                <li><a href="services/it_asset/IT_Asset.html" class="text-gray-700 hover:text-blue-600">24/7 Network Monitoring & Optimization</a></li>
-                                <li><a href="services/it_procurement/IT_Procurement.html" class="text-gray-700 hover:text-blue-600"> SD-WAN implementation</a></li>
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Improved Agility and Uptime</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/ITSales/ITsales.html">IT Sales & Services </a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="services/CCTV/CCTV.html" class="text-gray-700 hover:text-blue-600">Complete IT Procurement & Support</a></li>
-                                <li><a href="services/CCTV/CCTV.html" class="text-gray-700 hover:text-blue-600">Hardware Sales & Supply</a></li>
-                                <li><a href="services/cloudemail/Cloud.html" class="text-gray-700 hover:text-blue-600">Licensed Software Solutions/a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Accessories & Peripherals</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Setup & Installation Services</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Annual Maintenance Contracts </a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/CCTV/cctvmain.html"> CCTV & ACL (Automation)</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart Security Solutions</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">CCTV System Installation</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Access Control Systems</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Remote Monitoring Capabilities</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Driven Video Analytics</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html"> Firewall & Cybersecurity</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Enterprise-Grade Protection</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Firewall Deployment & Configuration/a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Endpoint Security Solutions</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Vulnerability Testing & Risk Assessment</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Data Encryption & Compliance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Enabled Cyber Defense</a></li>
-                            </ul> -->
-                        </div>
-                        <div class="p4">
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="services/amc_service/AMC.html">Software & Application Development</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Custom Software That Fits Your Business</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Web & Mobile Application Development</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Enterprise Software (ERP/CRM)</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">User Interface & Experience (UI/UX)</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Ongoing Support & Maintenance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">	AI Integration</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/IT Support/ITSupport.html"> 24×7 IT Support</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Anytime, Anywhere IT Assistance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Remote & On-Site Support</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Server & Network Monitoring</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Incident Management & Recovery</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Proactive Maintenance</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/powerbackhup/powerbackup.html"> Power & Backup Solutions</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Stay Operational During Outages</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">UPS and inverter installation</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Power conditioning</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Battery maintenance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Power Planning & Audits</a></li>
-                                 <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart Energy Management</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="#"> Home Automation</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smarter Homes, Greater Control</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart lighting and energy control</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Voice-controlled appliances</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart security system</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Automated HVAC and entertainment</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Powered Automation</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="#">Digital Services</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Build Your Brand Online</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Website design and development</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Search Engine Optimisation SEO</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Digital Marketing Campaigns</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Social media management</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI Integration for Digital Experiences</a></li>
-                            </ul> -->
-                        </div>
-                    <!-- close menu -->
-                    </div>
-                </div>
+<!-- The updated navbar code -->
+         <header class="sticky top-0 shadow-sm bg-stone-100 z-50">
+  <nav class="border-gray-200 dark:bg-gray-900">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="Click.svg" class="h-16" alt="clickqura AI Solutions" />
+      </a>
 
-                <div class="nav-item relative group">
-                    <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Industries</a>
-                    <div class="mega-menu absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg p-4">
-                        <ul class="space-y-2">
-                            <li><a href="Industries/Finance.html" class="text-gray-700 hover:text-blue-600 block px-4 py-2">Financial Services</a></li>
-                            <li><a href="Industries/healthcare.html" class="text-gray-700 hover:text-blue-600 block px-4 py-2">Healthcare</a></li>
-                            <li><a href="Industries/Manufacturing.html" class="text-gray-700 hover:text-blue-600 block px-4 py-2">Manufacturing</a></li>
-                            <li><a href="Industries/Telecom.html" class="text-gray-700 hover:text-blue-600 block px-4 py-2">Telecom</a></li>
-                            <li><a href="Industries/Public.html" class="text-gray-700 hover:text-blue-600 block px-4 py-2">Public Sector</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="nav-item relative">
-                    <a href="about.html" class="text-gray-800 hover:text-blue-600 font-medium">About</a>
-                </div>
-                <div class="nav-item relative">
-                    <a href="careers.html" class="text-gray-800 hover:text-blue-600 font-medium">Careers</a>
-                </div>
-            </nav>
-            
-            <div class="flex items-center ml-8 space-x-4">
-                <!-- <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.479 5.093 1.479 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.296-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                    </svg>
-                </a>
-                <a href="tel:+919876543210" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 22.621l-3.521-3.52c1.107-1.107 1.766-2.432 1.766-3.98 0-2.003-1.625-3.625-3.625-3.625-1.548 0-2.873.658-3.98 1.766l-3.521-3.521c1.107-1.107 2.432-1.765 3.98-1.765 2.003 0 3.625 1.623 3.625 3.625 0 1.548-.659 2.873-1.766 3.98l3.521 3.52c1.107-1.107 2.432-1.766 3.98-1.766 2.003 0 3.625 1.623 3.625 3.625 0 1.548-.659 2.873-1.766 3.98zm-15-11.621c0-2.761 2.239-5 5-5s5 2.239 5 5-2.239 5-5 5-5-2.239-5-5zm9 0c0-2.21-1.791-4-4-4s-4 1.79-4 4 1.791 4 4 4 4-1.79 4-4z"/>
-                    </svg>
-                </a> -->
-                <button onclick="window.open('contact.html', '_blank')" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-1.5 px-4 rounded-md transition duration-300 shadow-md hover:shadow-lg transform hover:scale-105 text-xs sm:text-sm">
-                    Get in Touch
-                </button>
-            </div>
-            
-            <!-- Mobile menu button -->
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
+      <!-- Right side buttons -->
+      <div class="flex items-center md:order-2">
+        <a href="contact.html"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          Get in touch
+        </a>
+        <button data-collapse-toggle="navbar-main" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+
+        </button>
+      </div>
+
+      <!-- Main nav -->
+      <div id="navbar-main" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+          <li><a href="index.html"
+              class="block py-2 px-3 text-blue-600 md:p-0">Home</a></li>
+
+          <!-- Services trigger -->
+          <li>
+            <button id="mega-menu-button" data-dropdown-toggle="mega-menu"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Services
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
             </button>
-        </div>
-        
-        <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white shadow-md">
-            <div class="container mx-auto px-4 py-2">
-                <a href="index.html" class="block py-2 text-gray-800 hover:text-blue-600">Home</a>
-                <div class="py-2">
-                    <button class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 services-toggle">
-                        Services
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="services-dropdown pl-2 mt-1 space-y-1 hidden relative top-0 left-0 grid grid-cols-2 gap-2 px-2 py-2">
-                        
-                        <!-- mobile menu -->
-                         <div class="p4">
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html">Cloud & Virtualization</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Modern IT Infrastructure</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Cloud migration & management</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Virtual machines & storage setup</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Cloud Deployement Models</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Virtualization Platforms Supported</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Consultation to Support</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/Network Automation/NetwokAuto.html">Network Automation</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Efficient, High-Performance Networking</a></li>
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Automated Configuration Management</a></li>
-                                <li><a href="services/hardware/hardware.html" class="text-gray-700 hover:text-blue-600">Zero-touch provisioning</a></li>
-                                <li><a href="services/it_asset/IT_Asset.html" class="text-gray-700 hover:text-blue-600">24/7 Network Monitoring & Optimization</a></li>
-                                <li><a href="services/it_procurement/IT_Procurement.html" class="text-gray-700 hover:text-blue-600"> SD-WAN implementation</a></li>
-                                <li><a href="services/Repairs/Repairs_Upgrades.html" class="text-gray-700 hover:text-blue-600">Improved Agility and Uptime</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/ITSales/ITsales.html"> IT Sales and Services</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="services/CCTV/CCTV.html" class="text-gray-700 hover:text-blue-600">Complete IT Procurement & Support</a></li>
-                                <li><a href="services/CCTV/CCTV.html" class="text-gray-700 hover:text-blue-600">Hardware Sales & Supply</a></li>
-                                <li><a href="services/cloudemail/Cloud.html" class="text-gray-700 hover:text-blue-600">Licensed Software Solutions/a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Accessories & Peripherals</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Setup & Installation Services</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Annual Maintenance Contracts </a></li>>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/CCTV/cctvmain.html"> CCTV and ACL (Automation)</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                               <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart Security Solutions</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">CCTV System Installation</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Access Control Systems</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Remote Monitoring Capabilities</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Driven Video Analytics</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html">Cybersecurity & Firewall</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Enterprise-Grade Protection</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Firewall Deployment & Configuration/a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Endpoint Security Solutions</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Vulnerability Testing & Risk Assessment</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Data Encryption & Compliance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Enabled Cyber Defense</a></li>
-                            </ul> -->
-                        </div>
-                        <div class="p4">
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="#">Software & Application Development</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Custom Software That Fits Your Business</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Web & Mobile Application Development</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Enterprise Software (ERP/CRM)</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">User Interface & Experience (UI/UX)</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Ongoing Support & Maintenance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">	AI Integration</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/IT Support/ITSupport.html"> 24×7 IT Support</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Anytime, Anywhere IT Assistance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Remote & On-Site Support</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Server & Network Monitoring</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Incident Management & Recovery</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Proactive Maintenance</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="ClickQuraServices/powerbackhup/powerbackup.html"> Power and Backup Solutions</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Stay Operational During Outages</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">UPS and inverter installation</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Power conditioning</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Battery maintenance</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Power Planning & Audits</a></li>
-                                 <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart Energy Management</a></li>
-                                 </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="services/amc_service/AMC.html"> Home Automation</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smarter Homes, Greater Control</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart lighting and energy control</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Voice-controlled appliances</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Smart security system</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Automated HVAC and entertainment</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI-Powered Automation</a></li>
-                            </ul> -->
-                        </div>
-                        <div>
-                            <h3 class="font-medium text-lg mb-4 text-blue-600"><a href="services/amc_service/AMC.html">Digital Services</a></h3>
-                            <!-- <ul class="space-y-1 text-sm">
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Build Your Brand Online</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600"> Website design and development</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Search Engine Optimisation SEO</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Digital Marketing Campaigns</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">Social media management</a></li>
-                                <li><a href="#" class="text-gray-700 hover:text-blue-600">AI Integration for Digital Experiences</a></li>
-                            </ul> -->
-                        </div>
-                         <!-- close mobile menu -->
-                    </div>
-                </div>
-                <div class="py-2">
-                    <button class="flex items-center justify-between w-full text-gray-800 hover:text-blue-600 industries-toggle">
-                        Industries
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                        </svg>
-                    </button>
-                    <div class="industries-dropdown pl-4 mt-1 space-y-2 hidden">
-                        <a href="Industries/Finance.html" class="block py-1 text-blue-500 hover:text-blue-600">Financial Services</a>
-                        <a href="Industries/healthcare.html" class="block py-1 text-blue-500 hover:text-blue-600">Healthcare</a>
-                        <a href="Industries/Manufacturing.html" class="block py-1 text-blue-500 hover:text-blue-600">Manufacturing</a>
-                        <a href="Industries/Telecom.html" class="block py-1 text-blue-500 hover:text-blue-600">Telecom</a>
-                        <a href="Industries/Public.html" class="block py-1 text-blue-500 hover:text-blue-600">Public Sector</a>
-                    </div>
-                </div>
-                <a href="about.html" class="block py-2 text-gray-800 hover:text-blue-600">About</a>
-                <a href="careers.html" class="block py-2 text-gray-800 hover:text-blue-600">Careers</a>
-                <!-- <div class="flex justify-center space-x-6 my-4">
-                    <a href="https://wa.me/919876543210" target="_blank" class="text-green-500 hover:text-green-600 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.479 5.093 1.479 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.296-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                        </svg>
-                    </a>
-                    <a href="tel:+919876543210" class="text-blue-500 hover:text-blue-600 transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20 22.621l-3.521-3.52c1.107-1.107 1.766-2.432 1.766-3.98 0-2.003-1.625-3.625-3.625-3.625-1.548 0-2.873.658-3.98 1.766l-3.521-3.521c1.107-1.107 2.432-1.765 3.98-1.765 2.003 0 3.625 1.623 3.625 3.625 0 1.548-.659 2.873-1.766 3.98l3.521 3.52c1.107-1.107 2.432-1.766 3.98-1.766 2.003 0 3.625 1.623 3.625 3.625 0 1.548-.659 2.873-1.766 3.98zm-15-11.621c0-2.761 2.239-5 5-5s5 2.239 5 5-2.239 5-5 5-5-2.239-5-5zm9 0c0-2.21-1.791-4-4-4s-4 1.79-4 4 1.791 4 4 4 4-1.79 4-4z"/>
-                        </svg>
-                    </a>
-                </div> -->
-                <button onclick="window.open('contact.html', '_blank')" class="w-full my-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition duration-300 shadow-md hover:shadow-lg">
-                     Get in Touch
-                </button>
-            </div>
-        </div>
-    </header>
+          </li>
+
+          <li>
+            <button id="industries-dropdown-button" data-dropdown-toggle="industries-dropdown"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Industries
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
+
+          <li><a href="about.html" class="block py-2 px-3 text-gray-900 md:p-0">About</a></li>
+          <li><a href="careers.html" class="block py-2 px-3 text-gray-900 md:p-0">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mega menu content OUTSIDE the nav flex container -->
+  <div id="mega-menu"
+    class="absolute top-full z-10 hidden w-full left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
+    <div>
+      <ul class="space-y-4 !text-blue-600">
+        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
+        <li><a href="ClickQuraServices/Network Automation/NetwokAuto.html" class="hover:text-blue-600">Network Automation</a></li>
+        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="hover:text-blue-600">IT Sales & Services</a></li>
+        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="hover:text-blue-600">CCTV & ACL System</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="hover:text-blue-600">Cybersecurity & Firewall</a></li>
+        <li><a href="ClickQuraServices/SoftwareDeveloment/softwareDevelop.html" class="hover:text-blue-600">Software Development</a></li>
+        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="hover:text-blue-600">24×7 IT Support</a></li>
+        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="hover:text-blue-600">Power & Backup Solutions</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="#" class="hover:text-blue-600">Home Automation</a></li>
+        <li><a href="ClickQuraServices/DigitalServices/DigitalService.html" class="hover:text-blue-600">Digital Services</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="industries-dropdown"
+    class="absolute top-full z-10 hidden bg-stone-50 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+    <ul class="py-2 text-sm text-blue-600 dark:text-gray-200">
+      <li><a href="Industries/Finance.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Financial Services</a></li>
+      <li><a href="Industries/healthcare.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Healthcare</a></li>
+      <li><a href="Industries/Manufacturing.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manufacturing</a></li>
+      <li><a href="Industries/Public.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Public Sector</a></li>
+      </ul>
+    </div>
+</header>
 
   <!-- Contact Section -->
   <section class="max-w-7xl mx-auto my-12 px-6 lg:px-8">
