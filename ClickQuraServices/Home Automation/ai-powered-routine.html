@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Routine: Smart Automation for Your Company</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="ai-powered-routine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Flowbite JS CDN - Required for dropdown functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</head>
+<body>
+    <!-- The updated navbar code -->
+         <header class="sticky top-0 shadow-sm z-50 bg-gradient-to-r from-white to-blue-200 dark:from-white dark:to-blue-200">
+  <nav class="border-gray-200">
+    <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="../../Click.svg" class="h-16" alt="clickqura AI Solutions" />
+      </a>
+
+      <!-- Right side buttons -->
+      <div class="flex items-center md:order-2">
+        <a href="../../contact.html"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+          Get in touch
+        </a>
+        <button data-collapse-toggle="navbar-main" type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+
+        </button>
+      </div>
+
+      <!-- Main nav -->
+      <div id="navbar-main" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+        <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+          <li><a href="../../index.html"
+              class="block py-2 px-3 text-blue-600 md:p-0">Home</a></li>
+
+          <!-- Services trigger -->
+          <li>
+            <button id="mega-menu-button" data-dropdown-toggle="mega-menu"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Services
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
+
+          <li>
+            <button id="industries-dropdown-button" data-dropdown-toggle="industries-dropdown"
+              class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 md:w-auto md:p-0">
+              Industries
+              <svg class="w-2.5 h-2.5 ms-3" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m1 1 4 4 4-4" />
+              </svg>
+            </button>
+          </li>
+
+          <li><a href="../../about.html" class="block py-2 px-3 text-gray-900 md:p-0">About</a></li>
+          <li><a href="../../careers.html" class="block py-2 px-3 text-gray-900 md:p-0">Careers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mega menu content OUTSIDE the nav flex container -->
+  <div id="mega-menu"
+    class="absolute top-full z-10 hidden w-full left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
+    <div>
+      <ul class="space-y-4 !text-blue-600">
+        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
+        <li><a href="../Network Automation/NetwokAuto.html" class="hover:text-blue-600">Network Automation</a></li>
+        <li><a href="../ITSales/ITsales.html" class="hover:text-blue-600">IT Sales & Services</a></li>
+        <li><a href="../CCTV/cctvmain.html" class="hover:text-blue-600">CCTV & ACL System</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="../CyberFirwall/CyberSecurity.html" class="hover:text-blue-600">Cybersecurity & Firewall</a></li>
+        <li><a href="../SoftwareDeveloment/softwareDevelop.html" class="hover:text-blue-600">Software Development</a></li>
+        <li><a href="../IT Support/ITSupport.html" class="hover:text-blue-600">24×7 IT Support</a></li>
+        <li><a href="../ClickQuraServices/powerbackhup/powerbackup.html" class="hover:text-blue-600">Power & Backup Solutions</a></li>
+      </ul>
+    </div>
+    <div>
+      <ul class="space-y-4 text-blue-600">
+        <li><a href="HomeAutomation.html" class="hover:text-blue-600">Home Automation</a></li>
+        <li><a href="../DigitalServices/DigitalService.html" class="hover:text-blue-600">Digital Services</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="industries-dropdown"
+    class="absolute top-full z-10 hidden divide-y divide-gray-100 bg-white rounded-lg shadow w-44">
+    <ul class="py-2 text-sm text-blue-600">
+      <li><a href="../../Industries/Finance.html" class="block px-4 py-2 hover:text-blue-100">Financial Services</a></li>
+      <li><a href="../../Industries/healthcare.html" class="block px-4 py-2 hover:text-blue-100">Healthcare</a></li>
+      <li><a href="../../Industries/Manufacturing.html" class="block px-4 py-2 hover:text-blue-100">Manufacturing</a></li>
+      <li><a href="../../Industries/Public.html" class="block px-4 py-2 hover:text-blue-100">Public Sector</a></li>
+      </ul>
+    </div>
+</header>
+    <header class="hero-section ai-hero">
+        <div class="hero-content">
+            <h1>AI-Powered Routine</h1>
+            <p class="tagline">Smarter operations. Effortless efficiency. A new way to work.</p>
+            <button class="contact-button">Contact Us</button>
+        </div>
+    </header>
+
+    <section class="service-description service-image-section">
+        <div class="container">
+            <div class="image-container">
+                <img src="https://skillfloor.com/blog/uploads/images/202310/image_870x_652150475b1b6.jpg" alt="AI Routine Illustration">
+            </div>
+            <div class="text-content">
+                <p>With time being your most prized asset, AI-Powered Routines provide an innovative method for maximizing each element of your business processes. Our solution is more than mere automation, with artificial intelligence that learns your habits, anticipates requirements, and carries out tasks automatically. From fine-tuning the climate according to a meeting calendar to smartly controlling resource availability, we assist you in building a workspace that meets your needs ahead of time, so your team can concentrate on what matters most.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comprehensive-services">
+        <div class="container">
+            <h2>The AI Advantage for Your Business</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Predictive Efficiency & Automation:</h3>
+                    <p>Our systems learn historical and real-time information to automate intricate, multi-step processes. For instance, a system can prepare a conference room (tuning lights, temperature, and display options) automatically five minutes prior to a scheduled meeting, without a single manual input. This eliminates tedious tasks and conserves precious time.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Optimized Resource Management:</h3>
+                    <p>AI can intelligently handle shared resources such as meeting rooms or equipment. The system can always automatically release a booking if there is no arrival, and the space will be available to someone else, thus conserving time and resources that would otherwise be wasted.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Personalized & Responsive Environments:</h3>
+                    <p>The system can create a personalized experience for each user. For example, it can learn an employee's preferred lighting and temperature settings and automatically apply them to any workspace they use, fostering a more comfortable and productive environment.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Efficient Operations & Less Overhead:</h3>
+                    <p>Automating common operational tasks, our solutions enable you to minimize manual effort and eliminate the possibility of human error. This results in more efficient operations, less interference, and a direct effect on your bottom line.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Increased Security & Active Response:</h3>
+                    <p>AI-driven routines can be combined with your security systems to execute active checks. For example, the system can lock all the doors and shut off non-essential equipment automatically at closing time, adding a layer of security and saving energy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="what-we-include">
+        <div class="container">
+            <h2>Our AI-Powered Routine Services Include</h2>
+            <div class="service-columns">
+                <div class="service-column">
+                    <h3>Custom Routine Development</h3>
+                    <ul>
+                        <li>We help you identify the most key operational routines and create custom AI-powered automations that address specific business needs and goals.</li>
+                    </ul>
+                </div>
+                <div class="service-column">
+                    <h3>AI & IoT Integration</h3>
+                    <ul>
+                        <li>Expertly integrate AI into the systems with your current IoT-enabled lighting, HVAC, security, and entertainment systems to create a completely cohesive, intelligent environment.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="service-columns">
+                <div class="service-column">
+                    <h3>Behavioral Analysis & Optimization</h3>
+                    <ul>
+                        <li>We utilize sophisticated analytics to analyze usage behavior and continuously optimize your routines for optimal efficiency and cost-savings.</li>
+                    </ul>
+                </div>
+                <div class="service-column">
+                    <h3>Round-the-Clock Support & System Maintenance</h3>
+                    <ul>
+                        <li>Our professional team offers extensive training and round-the-clock support to make sure your AI routines run at their best and evolve in response to your business requirements.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <h2>Ready to leverage the power of AI to revolutionize your business processes?</h2>
+            <p>Get in touch with us today to learn how our AI-Powered Routine services can make your workplace smarter, more efficient, and more responsive than ever.</p>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">CQ</div>
+                        <h3 class="text-xl font-bold">ClickQura <span class="text-blue-400">AI Solutions</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Providing innovative IT solutions to help businesses thrive in the digital age.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">ClickQura AI Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../../about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="../../careers.html" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Testimonials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-1 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400">3-2-603/33/32/B,ZEHRA NAGAR,RD.NO:10, BANJARA HILLS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-gray-400">+91 7386145454</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-gray-400">info@clickqura.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0"><span id="current-year">&copy;</span>2025 ClickQura AI Solutions. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
