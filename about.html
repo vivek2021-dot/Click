@@ -15,8 +15,8 @@
 </head>
 <body class="bg-white font-sans">
    <!-- The updated navbar code -->
-         <header class="sticky top-0 shadow-sm bg-stone-100 z-50">
-  <nav class="border-gray-200 dark:bg-gray-900">
+         <header class="sticky top-0 shadow-sm z-50 bg-gradient-to-r from-white to-blue-200 dark:from-white dark:to-blue-200">
+  <nav class="border-gray-200">
     <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="Click.svg" class="h-16" alt="clickqura AI Solutions" />
@@ -76,7 +76,7 @@
 
   <!-- Mega menu content OUTSIDE the nav flex container -->
   <div id="mega-menu"
-    class="absolute top-full z-10 hidden w-full left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
+    class="absolute top-full z-10 hidden w-auto left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
     <div>
       <ul class="space-y-4 !text-blue-600">
         <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
@@ -102,40 +102,41 @@
   </div>
 
   <div id="industries-dropdown"
-    class="absolute top-full z-10 hidden bg-stone-50 divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-    <ul class="py-2 text-sm text-blue-600 dark:text-gray-200">
-      <li><a href="Industries/Finance.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Financial Services</a></li>
-      <li><a href="Industries/healthcare.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Healthcare</a></li>
-      <li><a href="Industries/Manufacturing.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Manufacturing</a></li>
-      <li><a href="Industries/Public.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Public Sector</a></li>
+    class="absolute top-full z-10 hidden divide-y divide-gray-100 bg-white rounded-lg shadow w-44">
+    <ul class="py-2 text-sm text-blue-600">
+      <li><a href="Industries/Finance.html" class="block px-4 py-2 hover:text-blue-100">Financial Services</a></li>
+      <li><a href="Industries/healthcare.html" class="block px-4 py-2 hover:text-blue-100">Healthcare</a></li>
+      <li><a href="Industries/Manufacturing.html" class="block px-4 py-2 hover:text-blue-100">Manufacturing</a></li>
+      <li><a href="Industries/Public.html" class="block px-4 py-2 hover:text-blue-100">Public Sector</a></li>
       </ul>
     </div>
 </header>
 
+
     <!-- About Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16" style="background: #1a202c;">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About <span class="text-blue-600">ClickQura</span></h2>
-                    <p class="text-lg text-gray-600 mb-6">
-                        ClickQura IT Solutions is a leading provider of comprehensive IT services, offering innovative solutions to businesses of all sizes. With our team of experienced professionals, we deliver reliable and scalable IT infrastructure services.
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About <span class="text-blue-600">ClickQura AI Solutions</span></h2>
+                    <p class="text-lg text-white mb-6">
+                        ClickQura AI Solutions is a leading provider of comprehensive IT services, offering innovative solutions to businesses of all sizes. With our team of experienced professionals, we deliver reliable and scalable IT infrastructure services.
                     </p>
-                    <p class="text-lg text-gray-600 mb-6">
+                    <p class="text-lg text-white mb-6">
                         Founded in 2025, we have grown to become a trusted partner for businesses looking to optimize their IT operations and enhance productivity through technology.
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-blue-600 mb-1">10+</h3>
-                            <p class="text-gray-600">Years Experience</p>
+                            <h3 class="font-bold text-blue-600 mb-1 counter" data-target="10">0</h3>
+                            <p class="text-gray-600 font-medium">Years Experience</p>
                         </div>
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-blue-600 mb-1">500+</h3>
-                            <p class="text-gray-600">Satisfied Clients</p>
+                            <h3 class="font-bold text-blue-600 mb-1 counter" data-target="500">0</h3>
+                            <p class="text-gray-600 font-medium">Satisfied Clients</p>
                         </div>
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-blue-600 mb-1">50+</h3>
-                            <p class="text-gray-600">Certified Experts</p>
+                            <h3 class="font-bold text-blue-600 mb-1 counter" data-target="50">0</h3>
+                            <p class="text-gray-600 font-medium">Certified Experts</p>
                         </div>
                     </div>
                 </div>
@@ -148,19 +149,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-blue-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your IT Infrastructure?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">
-                Get in touch with our experts to discuss how we can help your business grow with our IT solutions.
-            </p>
-            <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-3 px-8 rounded-full transition duration-300">
-                Get in Touch
-            </button>
-        </div>
-    </section>
-<br><br>
+
       <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -254,4 +243,32 @@
         </div>
     </footer>
     
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll(".counter");
+
+      const animateCounter = (counter) => {
+        const target = +counter.getAttribute("data-target");
+        let current = 0;
+        const increment = Math.ceil(target / 200); // balanced increment for medium speed
+
+        const update = () => {
+          current += increment;
+          if (current < target) {
+            counter.innerText = current;
+            setTimeout(update, 20); // moderate delay for medium speed
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        update();
+      };
+
+      counters.forEach(counter => {
+        animateCounter(counter);
+      });
+    });
+  </script>
+
 </html>
