@@ -8,10 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <!-- GSAP CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script> -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Flowbite JS CDN - Required for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     
@@ -167,7 +168,7 @@
     <section class="hero-background relative h-screen flex items-center justify-center text-center p-4">
         <div class="absolute inset-0 bg-black opacity-60"></div> <!-- Dark overlay for readability -->
         <div class="relative z-10 max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white rounded-lg p-2 from-blue-600 to-purple-600 shadow-lg">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight text-white rounded-lg p-2 from-blue-600 to-purple-600 shadow-lg" data-aos="fade-right">
                 Automated Configuration Management
             </h1>
             <!-- Tagline: white color - font size -16px -->
@@ -181,7 +182,7 @@
     <!-- Content Section: Paragraph for the service & Image for Cloud Migration -->
     <main class="container mx-auto px-4 py-16">
         <section class="mb-20 flex flex-col md:flex-row items-center gap-12">
-            <div class="md:w-1/2 flex justify-center">
+            <div class="md:w-1/2 flex justify-center" data-aos="fade-right">
                 <!-- Animate image for cloud migration -->
                 <!-- <div class="w-48 h-48 bg-blue-700 rounded-full flex items-center justify-center shadow-lg animate-cloud-migration"> -->
                     <!-- <span class="text-white text-lg font-semibold text-center">Cloud Migration Animation</span> -->
@@ -191,11 +192,11 @@
                  <img src="https://shorturl.at/in77y" alt="Animated Cloud Service Icon" onerror="this.onerror=null;this.src='https://placehold.co/200x200/4a5568/e2e8f0?text=Image+Error';">
             </div>
             <div class="md:w-1/2 text-lg leading-relaxed content-text-section">
-                <h2 class="text-3xl sm:text-4xl font-bold text-blue-400 mb-6 rounded-lg">Transforming Network Configuration</h2>
-                <p class="mb-4">
+                <h2 class="text-3xl sm:text-4xl font-bold text-blue-400 mb-6 rounded-lg" data-aos="fade-left">Transforming Network Configuration</h2>
+                <p class="mb-4" data-aos="fade-down">
                     The rapid evolution of networking technologies and the increasing complexity of IT infrastructures present significant challenges for network configuration management. As organizations deploy more sophisticated and scalable networks, including data centers, cloud environments, and hybrid networks, the need for effective configuration management becomes more critical.
                 </p>
-                <p class="mb-4">
+                <p class="mb-4" data-aos="fade-down">
                     Traditional manual methods of managing network configurations are increasingly inadequate in meeting these demands, leading to the rise of <strong class="text-purple-300">Automated Network Configuration Management (NCM)</strong> as a transformative solution. Automated NCM addresses these challenges by leveraging automation technologies to streamline and enhance the management of network configurations, using software tools and platforms to automate routine tasks, enforce standards, and ensure consistency.
                 </p>
                 <button class="mt-6 bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-purple-500 focus:ring-opacity-50 btn-animated">
@@ -206,30 +207,30 @@
 
         <!-- Challenges Section -->
         <section id="challenges" class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">Are These Your Network Headaches?</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text" data-aos="fade-right">Are These Your Network Headaches?</h2>
             <p class="text-xl text-center text-purple-300 mb-12 reveal-text">The Hidden Costs of Traditional Configuration</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Challenge 1 -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card" data-aos="fade-down">
                     <div class="text-5xl mb-4 text-red-400"></div> <!-- Icon placeholder -->
                     <h3 class="text-xl font-semibold mb-3 text-red-300">Human Error</h3>
                     <p class="text-gray-300">Small mistakes, significant consequences. Manual configuration is prone to errors, which can lead to network outages, security vulnerabilities, and performance issues.</p>
                 </div>
                 <!-- Challenge 2 -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card" data-aos="fade-down">
                     <div class="text-5xl mb-4 text-yellow-400"></div> <!-- Icon placeholder -->
                     <h3 class="text-xl font-semibold mb-3 text-yellow-300">Scalability Issues</h3>
                     <p class="text-gray-300">As networks grow in size and complexity, managing configurations manually becomes increasingly cumbersome, hindering your ability to scale effectively.</p>
                 </div>
                 <!-- Challenge 3 -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card" data-aos="fade-down">
                     <div class="text-5xl mb-4 text-indigo-400"></div> <!-- Icon placeholder -->
                     <h3 class="text-xl font-semibold mb-3 text-indigo-300">Configuration Drift</h3>
                     <p class="text-gray-300">Over time, network configurations can drift from their intended state due to manual changes, resulting in inconsistencies and vulnerabilities.</p>
                 </div>
                 <!-- Challenge 4 -->
-                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card" data-aos="fade-down">
                     <div class="text-5xl mb-4 text-green-400"></div> <!-- Icon placeholder -->
                     <h3 class="text-xl font-semibold mb-3 text-green-300">Compliance & Documentation</h3>
                     <p class="text-gray-300">Maintaining accurate documentation is essential for compliance, but manual efforts are time-consuming and may not always reflect the current state.</p>
@@ -239,10 +240,10 @@
 
         <!-- Methodologies Section -->
         <section id="methodologies" class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">How We Deliver Excellence</h2>
-            <p class="text-xl text-center text-purple-300 mb-12 reveal-text">Proven Methodologies and Industry-Leading Tools</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text" data-aos="fade-left">How We Deliver Excellence</h2>
+            <p class="text-xl text-center text-purple-300 mb-12 reveal-text" data-aos="fade-right">Proven Methodologies and Industry-Leading Tools</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-down">
                 <!-- Methodology 1 -->
                 <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
                     <div class="text-5xl mb-4 text-yellow-400"></div> <!-- Icon placeholder -->
@@ -272,10 +273,10 @@
 
         <!-- Benefits Section -->
         <section id="benefits" class="mb-20">
-            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text">Why Choose Automated NCM?</h2>
-            <p class="text-xl text-center text-purple-300 mb-12 reveal-text">Tangible Benefits for Your Business.</p>
+            <h2 class="text-3xl sm:text-4xl font-bold text-center text-blue-400 mb-4 rounded-lg reveal-text" data-aos="fade-left">Why Choose Automated NCM?</h2>
+            <p class="text-xl text-center text-purple-300 mb-12 reveal-text" data-aos="fade-left">Tangible Benefits for Your Business.</p>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="zoom-in">
                 <!-- Benefit 1 -->
                 <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-700 reveal-card">
                     <div class="text-5xl mb-4 text-green-400"></div> <!-- Icon placeholder -->
@@ -411,7 +412,7 @@
     </footer>
 
 
-    <script>
+    <!-- <script>
         // Register GSAP plugins
         gsap.registerPlugin(ScrollTrigger);
 
@@ -493,7 +494,13 @@
                 setupScrollAnimations(); // Re-setup
             });
         });
-    </script>
-
+    </script> -->
+<script>
+    AOS.init({
+        duration: 1200, // Animation duration in milliseconds
+        once: true, // Whether animation should happen only once while scrolling down
+        easing: 'ease-in-out', // Easing function for the animations
+    });
+</script>
 </body>
 </html>
