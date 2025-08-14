@@ -1,0 +1,23 @@
+ .section{
+            background-image: url('./BackgroundImages/home_background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+
+        .Industries{
+            background-image: url('./BackgroundImages/upper_lines.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+
+        .Industries_healthcare{
+            background-image: url('./BackgroundImages/home_background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
