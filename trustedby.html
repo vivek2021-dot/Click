@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trusted By Slider</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.slider {
+  display: flex;
+  animation: scroll-left 10s linear infinite; /* Faster speed */
+}
+
+.slider img {
+  height: 50px;
+  margin: 0 2rem;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.1);
+}
+</style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<section class="py-8 overflow-hidden">
+  <div class="text-center mb-6">
+    <h2 class="text-lg font-semibold text-gray-300">Trusted by</h2>
+  </div>
+
+  <div class="relative w-full overflow-hidden">
+    <div class="slider">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/PhonePe-Logo.png" alt="PhonePe">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=VERSE" alt="Verse">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=airpay" alt="Airpay">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Shriram" alt="Shriram Capital">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Equitas" alt="Equitas">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Fiber@1" alt="Fiber@1">
+
+      <!-- Duplicate logos -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="Oracle">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cisco_logo.svg" alt="Cisco">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/PhonePe-Logo.png" alt="PhonePe">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=VERSE" alt="Verse">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=airpay" alt="Airpay">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Shriram" alt="Shriram Capital">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Equitas" alt="Equitas">
+      <img src="https://dummyimage.com/120x50/ffffff/000000.png&text=Fiber@1" alt="Fiber@1">
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
