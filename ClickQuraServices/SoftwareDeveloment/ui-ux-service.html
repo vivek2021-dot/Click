@@ -7,6 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../BackgImages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Flowbite JS CDN - Required for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
@@ -122,18 +125,20 @@
         </div>
     </header>
 
+
+    <main class="Services_SoftwareDevelopment">
     <section class="service-description service-image-section">
         <div class="container">
-            <div class="image-container">
+            <div class="image-container" data-aos="fade-right">
                 <img src="https://api.reliasoftware.com/uploads/ux_ui_design_322afd6292.webp" alt="UI/UX Illustration">
             </div>
-            <div class="text-content">
+            <div class="text-content" data-aos="fade-left">
                 <p class="text-xl font-medium">A good product is not just about what it does; it's about how it feels to use it. Our User Interface & Experience (UI/UX) services are dedicated to making digital products not just beautiful but also intuitive, efficient, and enjoyable. We move beyond design aesthetics to better know your users' needs and behaviors, creating seamless and engaging experiences. By addressing both the visual design (UI) and functional flow (UX), we design interfaces that engage, build trust, and convert visitors into loyal customers.</p>
             </div>
         </div>
     </section>
 
-    <section class="comprehensive-services">
+    <section class="comprehensive-services" data-aos="fade-down">
         <div class="container">
             <h2>Our Thorough UI/UX Design Process</h2>
             <div class="services-grid">
@@ -165,7 +170,7 @@
         </div>
     </section>
 
-    <section class="what-we-include">
+    <section class="what-we-include" data-aos="fade-down">
             <h2>Key Service Offerings</h2>
             <p class="subtitle">We offer a complete range of UI/UX services to address all phases of your product's life cycle.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-white">
@@ -208,7 +213,7 @@
     
     </section>
 
-    <section class="why-choose-us">
+    <section class="why-choose-us" data-aos="fade-down">
         <div class="container">
             <h2>Why This Works</h2>
             <div class="features-grid">
@@ -241,13 +246,7 @@
         </div>
     </section>
 
-   
-
-
-
-
-
-
+</main>
 
  <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
@@ -283,13 +282,13 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
-                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
-                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
-                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
-                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
-                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
-                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
                     </ul>
                 </div>
                 
@@ -341,5 +340,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Whether animation should happen only once - while scrolling down
+        });
+
+    </script>
 </body>
 </html>

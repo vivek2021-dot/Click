@@ -64,12 +64,12 @@ body {
 
 .service-description {
     padding: 50px 0;
-    background-color: #2A2A4A; /* Slightly lighter dark background */
+    /* background-color: #2A2A4A; Slightly lighter dark background */
 }
 
 .why-choose-us, .what-we-include, .comprehensive-services, .process-map, .what-we-do-section {
     padding: 50px 0;
-    background-color: #1A1A2E;
+    /* background-color: #1A1A2E; */
 }
 
 .why-choose-us h2, .what-we-include h2, .comprehensive-services h2, .process-map h2, .what-we-do-section h2 {

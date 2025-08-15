@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #1A1A2E; /* Dark theme background - deep blue/purple */
-    color: #E0E0E0; /* Light text color for dark theme */
+    /* background-color: #1A1A2E; Dark theme background - deep blue/purple */
+    /* color: #E0E0E0; Light text color for dark theme */
 }
 
 .container {
@@ -66,7 +66,7 @@ body {
 /* Service Description Section */
 .service-description {
     padding: 50px 0;
-    background-color: #2A2A4A; /* Slightly lighter dark background */
+    /* background-color: #2A2A4A; Slightly lighter dark background */
 }
 
 .service-description .container {
@@ -97,13 +97,13 @@ body {
 .service-description .text-content p {
     font-size: 1.1em;
     line-height: 1.8;
-    color: #E0E0E0; /* Ensure text is light */
+    /* color: #E0E0E0; Ensure text is light */
 }
 
 /* Comprehensive Services Section */
 .comprehensive-services {
     padding: 50px 0;
-    background-color: #1A1A2E;
+    /* background-color: #1A1A2E; */
     text-align: center;
 }
 
@@ -148,7 +148,7 @@ body {
 /* What We Include Section */
 .what-we-include {
     padding: 50px 0;
-    background-color: #1A1A2E;
+    /* background-color: #1A1A2E; */
     text-align: center;
 }
 
@@ -161,7 +161,7 @@ body {
 .what-we-include .subtitle {
     font-size: 1.1em;
     margin-bottom: 40px;
-    color: #B0B0B0;
+    color: white;
 }
 
 .service-columns {
@@ -176,7 +176,7 @@ body {
     flex: 1;
     min-width: 300px;
     max-width: 45%;
-    background-color: #2A2A4A;
+    /* background-color: #2A2A4A; */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -197,7 +197,7 @@ body {
 .service-column ul li {
     margin-bottom: 10px;
     font-size: 1em;
-    color: #B0B0B0;
+    color: white;
     position: relative;
     padding-left: 20px;
 }
@@ -214,7 +214,7 @@ body {
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 50px 0;
-    background-color: #1A1A2E;
+    /* background-color: #1A1A2E; */
     text-align: center;
 }
 
@@ -226,7 +226,7 @@ body {
 
 .why-choose-us p {
     font-size: 1.1em;
-    color: #B0B0B0;
+    color: white;
     max-width: 800px;
     margin: 0 auto 40px auto;
 }

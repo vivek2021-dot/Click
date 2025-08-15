@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../BackgImages.css">
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -17,22 +18,22 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark theme background */
+            /* background-color: #1a202c; Dark theme background */
             color: #e2e8f0; /* Light text color */
         }
-        .container {
+        /* .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.5rem; /* Reduced padding for mobile */
-        }
+            padding: 1.5rem; Reduced padding for mobile */
+        /* } */
         @media (min-width: 768px) {
             .container {
-                padding: 4rem; /* Standard padding for desktop */
+                 padding: 4rem; /*Standard padding for desktop */
             }
         }
         .hero-bg {
             background: linear-gradient(to bottom, rgba(26, 32, 44, 0.9), rgba(26, 32, 44, 0.7)),url('https://shorturl.at/WavFC');
-             
+            background-size: cover;
         }
         /* Custom styles for button animation */
         .btn-contact {
@@ -155,7 +156,9 @@
         </div>
     </section>
 
-    <main class="container">
+
+    <div class="Services_CCTV">
+    <main>
         <!-- Main descriptive paragraph for the service -->
         <section class="py-8">
             <p class="text-gray-300 text-lg md:text-xl mb-10 leading-relaxed text-center service-description">Our Remote Monitoring & AI Analytics service empowers businesses to oversee their critical assets and environments in real time from anywhere. Leveraging advanced AI technologies, we deliver intelligent video analytics, instant alerts, and secure remote control to enhance security, operational efficiency, and proactive decision-making. This comprehensive solution is scalable, secure, and designed to meet the evolving needs of modern enterprises.</p>
@@ -185,7 +188,7 @@
 
         <!-- Additional Essential Capabilities Section -->
         <section class="py-12 md:py-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-12 capabilities-title">Additional Essential Capabilities</h2>
+            <h2 class="text-3xl md:text-4xl font-bold bg-stone-400 text-white text-center mb-12 capabilities-title rounded-b-xl">Additional Essential Capabilities</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Capability 1 -->
                 <div class="bg-gray-800 p-8 rounded-lg shadow-md feature-card">
@@ -225,7 +228,7 @@
             </div>
         </section>
     </main>
-
+</div>
 <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -263,7 +266,7 @@
                         <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
                         <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
                         <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
-                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
                         <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
                         <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
                         <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>

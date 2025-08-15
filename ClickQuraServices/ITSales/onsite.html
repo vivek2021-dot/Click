@@ -8,14 +8,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../BackgImages.css">
     <!-- Flowbite JS CDN - Required for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark theme background */
-            color: #e2e8f0; /* Light text color */
+            /* background-color: #1a202c; Dark theme background */
+            /* color: #e2e8f0; Light text color */
             overflow-x: hidden; /* Prevent horizontal scroll due to animations */
         }
         .container {
@@ -248,15 +249,17 @@
                 <!-- <div class="animated-paragraph-container">
                     <p class="moving-text text-white">Whether it’s setting up hardware physically at your location or configuring and deploying software remotely, our expert technicians handle everything end-to-end.</p>
                 </div> -->
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+                <button onclick="window.open('../../contact.html')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                     Contact Us
                 </button>
             </div>
         </div>
     </section>
 
+    <main class="Services_ITSales">
+
     <div class="container">
-        <hr class="border-gray-700 my-8">
+        <!-- <hr class="border-gray-700 my-8"> -->
 
         <!-- Service Overview -->
         <h2 class="section-title">Service Overview</h2>
@@ -265,7 +268,7 @@
                 We provide comprehensive on-site and remote installation services to ensure your IT infrastructure is deployed quickly, securely, and with minimal downtime. Whether it’s setting up hardware physically at your location or configuring and deploying software remotely, our expert technicians handle everything end-to-end.
             </p>
         </div>
-        <hr class="border-gray-700 my-8">
+        <!-- <hr class="border-gray-700 my-8"> -->
 
         <!-- What We Do — Key Points for On-site and Remote Installations -->
         <h2 class="section-title">What We Do — Key Points</h2>
@@ -273,7 +276,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="card fade-card">
                 <h3 class="card-title">Pre-Installation Planning</h3>
-                <ul>
+                <ul class="text-white">
                     <li class="card-list-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -303,7 +306,7 @@
 
             <div class="card fade-card">
                 <h3 class="card-title">On-site Installation</h3>
-                <ul>
+                <ul class="text-white">
                     <li class="card-list-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -345,7 +348,7 @@
 
             <div class="card fade-card">
                 <h3 class="card-title">Remote Installation</h3>
-                <ul>
+                <ul class="text-white">
                     <li class="card-list-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -387,7 +390,7 @@
 
             <div class="card fade-card">
                 <h3 class="card-title">Post-Installation Support</h3>
-                <ul>
+                <ul class="text-white">
                     <li class="card-list-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -417,7 +420,7 @@
 
             <div class="card fade-card">
                 <h3 class="card-title">Security & Compliance</h3>
-                <ul>
+                <ul class="text-white">
                     <li class="card-list-item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -441,12 +444,7 @@
         </div>
     </div>
 
-
-
-
-
-
-
+</main>
 
 
  <!-- Footer -->
@@ -483,13 +481,13 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
-                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
-                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
-                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
-                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
-                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
-                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
                     </ul>
                 </div>
                 

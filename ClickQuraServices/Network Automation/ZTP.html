@@ -7,13 +7,14 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../BackgImages.css">
     <!-- Flowbite JS CDN - Required for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark background */
-            color: #e2e8f0; /* Light text */
+            /* background-color: #1a202c; Dark background */
+            /* color: #e2e8f0; Light text */
             line-height: 1.6;
             overflow-x: hidden; /* Prevent horizontal scroll due to animations */
         }
@@ -167,10 +168,11 @@
         <div class="absolute top-0 left-0 w-full h-full opacity-10" style="background-image: url('https://shorturl.at/IEpXQ'); background-size: cover; background-position: center;"></div>
     </section>
 
+    <main class="Services_NetworkAutomation">
     <!-- Introductory Paragraph Section -->
-    <section class="py-12 md:py-16 bg-gray-700 text-center text-white">
+    <section class="py-12 md:py-16 text-center text-white">
         <div class="container mx-auto px-6 max-w-4xl">
-            <p class=" text-align text-sm md:text-sm mb-4 intro-paragraph text-base">
+            <p class=" text-align text-xl md:text-xl mb-4 intro-paragraph">
                 In today’s fast-paced IT environment, manually deploying and configuring network devices across large, diverse infrastructures can be slow, error-prone, and resource-intensive, often impacting operational efficiency and SLA commitments. Zero-Touch Provisioning (ZTP) eliminates these challenges by automating the entire provisioning process, allowing devices to configure themselves with the correct firmware, security policies, and network settings immediately upon connection.
             
             <!-- <p class="text-lg md:text-xl intro-paragraph"> -->
@@ -181,15 +183,15 @@
     </section>
 
     <!-- Problems Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <section class="py-16 md:py-24">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold section-title mb-10 text-center">Problems with Manual Network Device Provisioning</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <p class="text-lg mb-6">
+                    <p class="text-lg mb-6 text-white">
                         Network devices are often configured by network administrators, one device at a time, through a Command-Line Interface (CLI). In large networks at customer locations, network provisioning might mean the provisioning and configuration of thousands of devices.
                     </p>
-                    <p class="text-lg mb-6">
+                    <p class="text-lg mb-6 text-white">
                         Manual configuration of such networks can easily push several expert network administrators to work round the clock for days to finish the configuration and provisioning activities—that too, without any guarantee of successful provisioning for these devices.
                     </p>
                 </div>
@@ -198,15 +200,15 @@
                     <ul class="list-none space-y-4">
                         <li class="flex items-start">
                             <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
-                            <span class="text-lg">80% of all network downtime can be attributed to human errors during network provisioning and configuration.</span>
+                            <span class="text-lg text-white">80% of all network downtime can be attributed to human errors during network provisioning and configuration.</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
-                            <span class="text-lg">Manual configuration is slow, decentralized, and prone to errors.</span>
+                            <span class="text-lg text-white">Manual configuration is slow, decentralized, and prone to errors.</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path></svg>
-                            <span class="text-lg">People and travel become expensive as system engineers need physical access to the devices.</span>
+                            <span class="text-lg text-white">People and travel become expensive as system engineers need physical access to the devices.</span>
                         </li>
                     </ul>
                 </div>
@@ -215,30 +217,30 @@
     </section>
 
     <!-- ClickQura AI Solutions Section -->
-    <section class="py-16 md:py-24 bg-gray-900">
+    <section class="py-16 md:py-24">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold section-title mb-10">ClickQura AI Solutions that Enables ZTP</h2>
-            <p class="text-lg max-w-4xl mx-auto mb-12">
+            <p class="text-lg max-w-4xl mx-auto mb-12 text-white">
                 ClickQura developed a provisioning tool (for a network device maker) that enables the automatic configuration of devices and redirects a device to the Device Management Software (DMS) as soon as it is plugged in.
             </p>
             <h3 class="text-3xl font-semibold highlight-text mb-8">The three main components that participate in the ZTP process are:</h3>
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <div class="card p-8">
                     <h4 class="text-2xl font-bold mb-4 text-blue-300">Device Management Software (DMS)</h4>
-                    <p class="text-lg">It manages networking devices, helping network administrators to monitor, manage, and configure them seamlessly.</p>
+                    <p class="text-lg text-white">It manages networking devices, helping network administrators to monitor, manage, and configure them seamlessly.</p>
                 </div>
                 <div class="card p-8">
                     <h4 class="text-2xl font-bold mb-4 text-blue-300">ZTP Server</h4>
-                    <p class="text-lg">It is a centralized server managed by the IT/Sales team to identify the networking devices sold to various customers.</p>
+                    <p class="text-lg text-white">It is a centralized server managed by the IT/Sales team to identify the networking devices sold to various customers.</p>
                 </div>
                 <div class="card p-8">
                     <h4 class="text-2xl font-bold mb-4 text-blue-300">Device</h4>
-                    <p class="text-lg">This device is stationed at the customer location and can be any networking equipment, such as VoIP devices, routers, and switches. A network can have several devices of various types and configurations.</p>
+                    <p class="text-lg text-white">This device is stationed at the customer location and can be any networking equipment, such as VoIP devices, routers, and switches. A network can have several devices of various types and configurations.</p>
                 </div>
             </div>
 
             <h3 class="text-3xl font-semibold section-title mb-6">High-Level Architecture</h3>
-            <p class="text-lg mb-8">Before we dive into the actual steps of ZTP, let us look at these components. This section describes the major components of the automated ZTP system.</p>
+            <p class="text-lg mb-8 text-white">Before we dive into the actual steps of ZTP, let us look at these components. This section describes the major components of the automated ZTP system.</p>
             <!-- Image for the architecture diagram -->
             <div class="architecture-image-container mx-auto w-full md:w-3/4 lg:w-2/3">
                 <img src="high level.png" alt="High-Level Architecture Diagram for Zero-Touch Provisioning" class="architecture-image">
@@ -247,54 +249,54 @@
     </section>
 
     <!-- Benefits Section -->
-    <section class="py-16 md:py-24 bg-gray-800">
+    <section class="py-16 md:py-24">
         <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold section-title mb-12 text-center">Benefits of ZTP</h2>
+            <h2 class="text-4xl font-bold section-title mb-12 text-center text-white">Benefits of ZTP</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card p-8">
                     <div class="mb-4">
                         <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Faster Deployment</h3>
-                    <p class="text-md">ZTP automates the configuration process, allowing network devices to be deployed quickly and efficiently. This saves businesses time and money by reducing the need for on-site technicians and manual configuration.</p>
+                    <p class="text-md text-white">ZTP automates the configuration process, allowing network devices to be deployed quickly and efficiently. This saves businesses time and money by reducing the need for on-site technicians and manual configuration.</p>
                 </div>
                 <div class="card p-8">
                     <div class="mb-4">
                         <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Consistent Configuration</h3>
-                    <p class="text-md">ZTP ensures that every device is configured to the same standard. This reduces the risk of human error and makes it easier to manage the network, leading to reliable operations.</p>
+                    <p class="text-md text-white">ZTP ensures that every device is configured to the same standard. This reduces the risk of human error and makes it easier to manage the network, leading to reliable operations.</p>
                 </div>
                 <div class="card p-8">
                     <div class="mb-4">
                         <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Improved Security</h3>
-                    <p class="text-md">By automating the configuration process, ZTP reduces the risk of security breaches caused by misconfigurations or human error, especially important for sensitive data or regulated industries.</p>
+                    <p class="text-md text-white">By automating the configuration process, ZTP reduces the risk of security breaches caused by misconfigurations or human error, especially important for sensitive data or regulated industries.</p>
                 </div>
                 <div class="card p-8">
                     <div class="mb-4">
                         <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Centralized Management</h3>
-                    <p class="text-md">ZTP allows for centralized management of the network, making it easier to monitor and control the configuration of devices across the entire organization efficiently.</p>
+                    <p class="text-md text-white">ZTP allows for centralized management of the network, making it easier to monitor and control the configuration of devices across the entire organization efficiently.</p>
                 </div>
                 <div class="card p-8">
                     <div class="mb-4">
                         <svg class="w-12 h-12 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-3 text-white">Scalability</h3>
-                    <p class="text-md">ZTP can scale to meet the needs of businesses of all sizes, from small startups to large enterprises. This makes it a flexible solution that can grow and adapt to meet changing business needs over time.</p>
+                    <p class="text-md text-white">ZTP can scale to meet the needs of businesses of all sizes, from small startups to large enterprises. This makes it a flexible solution that can grow and adapt to meet changing business needs over time.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Call to Action Section (Optional, but good for a service page) -->
-    <section class="py-16 md:py-24 bg-gray-900 text-center">
+    <section class="py-16 md:py-24 text-center">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl font-bold section-title mb-6">Ready to Streamline Your Network Deployment?</h2>
-            <p class="text-xl max-w-2xl mx-auto mb-10">
+            <p class="text-xl max-w-2xl mx-auto mb-10 text-white">
                 Contact ClickQura IT Services today to learn how Zero-Touch Provisioning can transform your IT operations.
             </p>
             <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-colors duration-300 transform hover:scale-105" id="ctaButton">
@@ -302,14 +304,7 @@
             </a>
         </div>
     </section>
-
-    
-
-
-
-
-
-
+</main>
 
  <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
@@ -345,13 +340,13 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
-                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
-                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
-                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
-                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
-                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
-                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
                     </ul>
                 </div>
                 

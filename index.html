@@ -37,9 +37,21 @@
             width: 100%;
             height: 100%;
             z-index: -1;
-            background-color: #060b19;
+            /* background-color: #060b19; */
             /* background-color: #1a202c; */
-        }
+          
+            background: radial-gradient(
+                    circle at center,
+                    #000000 0%,      
+                    #060b19 40%,     
+                    #0a1e3f 100%     
+                    );
+
+                
+                }
+
+
+          
 
         .service-card {
             transition: all 0.3s ease;
@@ -180,7 +192,7 @@
     class="absolute top-full z-10 hidden w-auto left-0 grid grid-cols-2 gap-4 p-6 bg-stone-50 border border-gray-200 shadow-md md:grid-cols-3">
     <div>
       <ul class="space-y-4 !text-blue-600">
-        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualisation</a></li>
+        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="hover:text-blue-600 ">Cloud & Virtualization</a></li>
         <li><a href="ClickQuraServices/Network Automation/NetwokAuto.html" class="hover:text-blue-600">Network Automation</a></li>
         <li><a href="ClickQuraServices/ITSales/ITsales.html" class="hover:text-blue-600">IT Sales & Services</a></li>
         <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="hover:text-blue-600">CCTV & ACL System</a></li>
@@ -250,7 +262,7 @@
                 <!-- Service Card 1 -->
                 <div class="service-card rounded-xl p-8 text-white h-80 flex flex-col justify-end cursor-pointer" style="background-image: url('https://shorturl.at/0dMeR')" data-aos="slide-up"> 
                     <div class="relative flex flex-col justify-end h-full text-white">
-                    <h3 class="text-2xl font-bold mb-2">Cloud & Virtualisation</h3>
+                    <h3 class="text-2xl font-bold mb-2">Cloud & Virtualization</h3>
                     <p class="mb-4">Empowering your business with scalable, secure, and future-ready cloud solutions.</p>
                     <a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="learn-more text-yellow-300 font-medium">Learn more</a>
                 </div>
@@ -450,7 +462,8 @@
 <!-- this portion for background image -->
 
 <!-- CTA Section -->
-    <section class="py-16 text-white bg-[#1a202c]">
+    <section class="py-16 text-white" style="background: radial-gradient( 100% 80% at 50% 30%, rgba(80, 80, 80, 1) 0%, rgba(40, 40, 40, 1) 50%, rgba(10, 10, 10, 1) 100% );">
+        <!-- bg-[#1a202c] -->
         <div class="container mx-auto px-4 text-center" data-aos="zoom-out">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">

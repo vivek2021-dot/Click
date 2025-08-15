@@ -6,7 +6,10 @@
     <title>Web & Mobile Application Development</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../BackgImages.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- Flowbite JS CDN - Required for dropdown functionality -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
 
@@ -113,25 +116,26 @@
     <header class="hero-section web-develop">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="hero-content">
-            <h1>Website Design & Development</h1>
+            <h1 data-aos="fade-left">Website Design & Development</h1>
             <p class="tagline font-bold">Building the Future, One App at a Time.</p>
             <br>
             <button class="contact-button font-bold">Contact Us</button>
         </div>
     </header>
 
+  <main class="Services_DigitalServices">
     <section class="service-description service-image-section">
         <div class="container">
-            <div class="image-container">
+            <div class="image-container" data-aos="fade-right">
                 <img src="https://deltasoftwaresolutions.net/wp-content/uploads/2023/08/Web-Design-and-Development-Services-1.jpg" alt="Web & Mobile App Illustration">
             </div>
             <div class="text-content">
-                <p class="text-xl font-medium">In this internet age, a strong web or mobile application is no longer an indulgence—it's a necessity. We convert your vision into solid, user-friendly, and expandable applications that spur growth and captivate your audience. Whether you need a lean mobile application to engage customers on the move or an interactive web application to automate your operations, our professional team is here to turn your dreams into reality. We take care of the full development cycle, from idea and design to deployment and support, so that you and your users have a hassle-free experience.</p>
+                <p class="text-xl font-medium" data-aos="fade-left">In this internet age, a strong web or mobile application is no longer an indulgence—it's a necessity. We convert your vision into solid, user-friendly, and expandable applications that spur growth and captivate your audience. Whether you need a lean mobile application to engage customers on the move or an interactive web application to automate your operations, our professional team is here to turn your dreams into reality. We take care of the full development cycle, from idea and design to deployment and support, so that you and your users have a hassle-free experience.</p>
             </div>
         </div>
     </section>
 
-    <section class="comprehensive-services">
+    <section class="comprehensive-services" data-aos="fade-down">
         <div class="container">
             <h2>Our Exhaustive Development Process</h2>
             <div class="services-grid">
@@ -163,7 +167,7 @@
         </div>
     </section>
 
-    <section class="what-we-include">
+    <section class="what-we-include" data-aos="fade-down">
             <h2>Key Service Offerings</h2>
             <p class="subtitle">We have a variety of services that cater to various business needs, whether you're starting something new or reinvigorating an existing business.</p>
     
@@ -229,7 +233,7 @@
     </section>
 
 
-    <section class="why-choose-us">
+    <section class="why-choose-us" data-aos="fade-down">
         <div class="container">
             <h2>Why Choose Us?</h2>
             <div class="features-grid">
@@ -261,15 +265,8 @@
             </div>
         </div>
     </section>
-
+</main>
    
-
-
-
-
-
-
-
  <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
@@ -304,13 +301,13 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
-                        <li><a href="ClickQuraServices/Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
-                        <li><a href="ClickQuraServices/ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
-                        <li><a href="ClickQuraServices/CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
-                        <li><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
-                        <li><a href="ClickQuraServices/IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
-                        <li><a href="ClickQuraServices/powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
+                        <li><a href="../Cloud and Virtualisation/CloudVirtual.html" class="text-gray-400 hover:text-white">Cloud & Virtualization</a></li>
+                        <li><a href="../Network Automation/NetOptimisation.html" class="text-gray-400 hover:text-white">Network Automation </a></li>
+                        <li><a href="../ITSales/ITsales.html" class="text-gray-400 hover:text-white">IT Sales & Services </a></li>
+                        <li><a href="../CCTV/cctvmain.html" class="text-gray-400 hover:text-white">CCTV & Access Control System </a></li>
+                        <li><a href="../CyberFirwall/CyberSecurity.html" class="text-gray-400 hover:text-white">Cybersecurity & Firewall</a></li>
+                        <li><a href="../IT Support/ITSupport.html" class="text-gray-400 hover:text-white">24×7 IT Support </a></li>
+                        <li><a href="../powerbackhup/powerbackup.html" class="text-gray-400 hover:text-white">Power & Backup Solutions</a></li>
                     </ul>
                 </div>
                 
@@ -362,5 +359,12 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Whether animation should happen only once - while scrolling down
+        });
+    </script>
 </body>
 </html>

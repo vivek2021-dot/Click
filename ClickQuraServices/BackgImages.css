@@ -1,0 +1,73 @@
+ .Services_CCTV{
+            background-image: url('../BackgroundImages/ClickLightBeam.png');
+            background-size: cover;
+            background-position: absolute;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+
+.Services_Cloud{
+            background-image: url('../BackgroundImages/ClickBusLines.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+
+.Services_CyberFirewall{
+            background-image: url('../BackgroundImages/ClickRed.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+
+.Services_ITSupport{
+            background-image: url('../BackgroundImages/ClickLandingPage.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+.Services_ITSales{
+            background-image: url('../BackgroundImages/ClickLandingPage.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+.Services_NetworkAutomation{
+            background-image: url('../BackgroundImages/ClickLines.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+.Services_PowerBackup{
+            background-image: url('../BackgroundImages/ClickDnaShape.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+.Services_HomeAutomation{
+            background-image: url('../BackgroundImages/ClickLandingPage.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+ .Services_DigitalServices{
+            background-image: url('../BackgroundImages/ClickLandingPage.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }
+.Services_SoftwareDevelopment{
+            background-image: url('../BackgroundImages/ClickEyes.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 4rem 0;
+        }

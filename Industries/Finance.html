@@ -6,6 +6,8 @@
     <title>ClickQura AI Solutions</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../backroundImages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <!-- <link rel="stylesheet" href="finance.css"> -->
     <script src="https://cdn.tailwindcss.com"></script>
    <!-- Flowbite JS CDN - Required for dropdown functionality -->
@@ -195,15 +197,15 @@
   <!-- Content Section -->
    <div class="Industries">
   <section class="content">
-    <p class="font-bold">
+    <p class="font-bold" data-aos="fade-right">
       The banking and finance industry landscape has witnessed a major transition at a rapid pace. The burden of retaining customers, cost-effective product and viable channel options, proper risk management, and enhanced financial performance has forced stakeholders to prioritize the implementation of IT solutions for smarter customer service operations.
       Customer expectations—whether in retail or corporate—are rising faster than ever. Institutions are turning to digital tools like mobile banking, IVR, and ATMs to deliver services 24/7. ClickQura AI Solutions enables financial organizations to meet these demands through secure, streamlined multi-channel delivery.
    </p>
 
     <!-- Centered Image -->
-    <img src="finDigram.png" alt="BFSI Infographic ClickQura"/>
+    <img src="finDigram.png" alt="BFSI Infographic ClickQura"/ data-aos="zoom-in">
 
-    <p class="font-bold">
+    <p class="font-bold" data-aos="fade-left">
       Our expertise in process and technology spans geographies and verticals. We empower financial institutions with cross-channel optimization, strong compliance frameworks, and cutting-edge infrastructure. From risk mitigation to operational efficiency, our team ensures banks and financial organizations deliver smarter, faster services.
       With innovation at the core, ClickQura delivers efficiency-driven, cost-effective IT solutions designed to keep the financial industry running at its peak - 24/7.
     </p>
@@ -303,5 +305,10 @@
         </div>
     </footer>
 
-    
+    <script>
+      AOS.init({
+        duration: 1200,
+        once: true, // whether animation should happen only once - while scrolling down
+      });
+    </script>
 </html>

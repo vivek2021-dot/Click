@@ -3,8 +3,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #1A1A2E; /* Dark theme background - deep blue/purple */
-    color: #E0E0E0; /* Light text color for dark theme */
+    /* background-color: #1A1A2E; Dark theme background - deep blue/purple */
+    /* color: #E0E0E0; Light text color for dark theme */
 }
 
 .container {
@@ -66,12 +66,12 @@ body {
 
 .service-description {
     padding: 50px 0;
-    background-color: #2A2A4A; /* Slightly lighter dark background */
+    /* background-color: #2A2A4A; Slightly lighter dark background */
 }
 
 .why-choose-us, .what-we-include, .comprehensive-services, .process-map, .what-we-do-section {
     padding: 50px 0;
-    background-color: #1A1A2E;
+    /* background-color: #1A1A2E; */
 }
 
 .why-choose-us h2, .what-we-include h2, .comprehensive-services h2, .process-map h2, .what-we-do-section h2 {
@@ -83,7 +83,7 @@ body {
 
 .why-choose-us .subtitle, .what-we-include .subtitle, .process-map .subtitle {
     text-align: center;
-    color: #B0B0B0;
+    color: white;
     margin-bottom: 40px;
     font-size: 1.1em;
 }
