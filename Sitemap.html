@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickQura AI Solutions - IT Company Sitemap</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color:black; /* Placeholder background image */
+            background-image: url('./BackgroundImages/white_wavelength.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to top for longer content */
+            min-height: 100vh;
+            padding: 2rem 1rem; /* Add padding for mobile view */
+        }
+        .sitemap-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            border-radius: 1rem;
+            padding: 2.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            max-width: 900px;
+            width: 100%;
+            /* Removed overflow-y: auto and max-height */
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul ul {
+            padding-left: 1.5rem; /* Indent sub-items */
+            margin-top: 0.5rem;
+        }
+        .sitemap-heading {
+            color: #4338CA; /* Indigo 700 */
+        }
+        .sitemap-item {
+            padding: 0.25rem 0;
+        }
+        .sitemap-item a {
+            color: #1E40AF; /* Blue 800 */
+            text-decoration: none;
+            transition: color 0.2s ease-in-out;
+        }
+        .sitemap-item a:hover {
+            color: #3B82F6; /* Blue 500 */
+            text-decoration: underline;
+        }
+        .sitemap-category {
+            font-weight: 600; /* Semi-bold for main categories */
+            color: #1F2937; /* Gray 800 */
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem; /* lg text size */
+        }
+        @media (max-width: 768px) {
+            .sitemap-container {
+                padding: 1.5rem;
+            }
+            .sitemap-category {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sitemap-container">
+        <h1 class="text-3xl md:text-4xl font-bold mb-6 text-center sitemap-heading">ClickQura AI Solutions - Sitemap</h1>
+
+        <ul>
+            <li class="sitemap-item">
+                <a href="index.html" class="font-bold text-lg">Homepage</a>
+            </li>
+            <li class="sitemap-category">What We Do</li>
+            <ul>
+
+                <li class="sitemap-category">Capabilities</li>
+                <ul>
+                    <li class="sitemap-item"><a href="ClickQuraServices/Cloud and Virtualisation/CloudVirtual.html">Cloud & Virtualization</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/Network Automation/NetwokAuto.html">Network Automation</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/ITSales/ITsales.html">IT Sales & Services</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/CCTV/cctvmain.html">CCTV & ACL System</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/CyberFirwall/CyberSecurity.html">Cybersecurity & Firewall</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/SoftwareDeveloment/softwareDevelop.html">Software Development</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/IT Support/ITSupport.html">24×7 IT Support</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/powerbackhup/powerbackup.html">Power & Backup Solutions</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/Home Automation/HomeAutomation.html">Home Automation</a></li>
+                    <li class="sitemap-item"><a href="ClickQuraServices/DigitalServices/DigitalService.html">Digital Services</a></li>
+                </ul>
+            </ul>
+
+            <li class="sitemap-category">Industries</li>
+            <ul>
+                <li class="sitemap-item"><a href="Industries/Finance.html">Financial</a></li>
+                <li class="sitemap-item"><a href="Industries/healthcare.html">Healthcare</a></li>
+                <li class="sitemap-item"><a href="Industries/Manufacturing.html">Manufacturing</a></li>
+                <li class="sitemap-item"><a href="Industries/Public.html">Public Sector</a></li>
+            </ul>
+
+            <li class="sitemap-category">Who We Are</li>
+            <ul>
+                <li class="sitemap-item"><a href="about.html">About Us</a></li>
+                <li class="sitemap-category">Careers</li>
+                <ul>
+                    <li class="sitemap-item"><a href="careers.html">Careers Homepage</a></li>
+                </ul>
+            </ul>
+        </ul>
+    </div>
+</body>
+</html>
+
